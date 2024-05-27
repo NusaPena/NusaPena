@@ -1,0 +1,30 @@
+{
+	"id": "",
+	"start_url": "./index.html",
+	"name": "",
+	"short_name": "",
+	"description": "",
+	"display": "standalone",
+	"background_color": "#ededed",
+	"theme_color": "#ededed",
+	"icons": [
+		{
+			"src": "images/icons/",
+			"sizes": "32x32",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "images/icons/",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "maskable"
+		},
+		{
+			"src": "images/icons/",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		}
+	]
+}
