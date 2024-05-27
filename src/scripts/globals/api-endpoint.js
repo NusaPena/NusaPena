@@ -1,0 +1,9 @@
+import CONFIG from "./config";
+
+const API_ENDPOINT = {
+	RESTAURANT_LIST: `${CONFIG.BASE_URL}/`,
+	RESTAURANT_DETAIL: `${CONFIG.BASE_URL}/`,
+	POST_REVIEW: `${CONFIG.BASE_URL}/`,
+};
+
+export default API_ENDPOINT;
