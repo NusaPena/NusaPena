@@ -1,3 +1,5 @@
+
+
 // * Universal Styling
 * {
 	padding: 0;
@@ -19,6 +21,7 @@ html {
 
 body {
 	overflow-x: hidden;
+	background-color: black;
 }
 
 main {
@@ -44,3 +47,6 @@ textarea {
 	min-width: 44px;
 	min-height: 44px;
 }
+
+@import "header";
+@import "footer";
