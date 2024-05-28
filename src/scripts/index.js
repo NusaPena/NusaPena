@@ -1,4 +1,6 @@
 import "regenerator-runtime"; /* for async await transpile */
+import "./components/navigation-bar";
+import "./components/footer-bar";
 import "../styles/main.scss";
 
 import App from "./views/app";
