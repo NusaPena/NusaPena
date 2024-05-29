@@ -3,77 +3,241 @@ footer-bar {
   flex-direction: column;
   color: white;
   background-color: #44643F;
-  padding: 24px 20px;
+  padding: 24px 10px;
   justify-content: center;
   min-width: 357px;
 
-  .footer-top {
+  .footer-top{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 
     .footer-title {
-      width: 40%;
+      width: 60%;
       margin: 10px;
       border-right: 1px solid white;
-      padding-left: 10%;
 
       h3 {
-        font-size: 45px;
+        font-size: 19px;
       }
 
       p {
-        font-size: 24px;
+        font-size: 9px;
         font-weight: 200;
-      }
-
-      @media screen and (max-width: 1328px) {
-        p{
-          font-size: 20px;
-        }
-      }
-
-      @media screen and (max-width: 1069px) {
-        p{
-          font-size: 18px;
-          font-weight: 200;
-          margin: 0;
-        }
       }
     }
 
     .footer-members {
-      width: 40%;
+      width: 50%;
       margin: 10px;
-      padding-left: 5%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
 
       p {
-        font-size: 25px;
+        font-size: 8px;
         font-weight: 200;
         margin: 0;
-      }
-
-      @media screen and (max-width: 1328px) {
-        p{
-          font-size: 20px;
         }
-      }
-
-      @media screen and (max-width: 1069px) {
-        p{
-          font-size: 18px;
-        }
-      }
     }
   }
 
   .footer-bottom {
     text-align: center;
     width: 100%;
-    font-size: 24px;
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: 375px) {
+    .footer-top {
+        .footer-title{
+          h3{
+            font-size: 20px;
+          }
+          p{
+            font-size: 11px;
+          }
+        }
+
+        .footer-members{
+          p{
+            font-size: 10px;
+          }
+        }
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .footer-top {
+      .footer-title{
+        h3{
+          font-size: 30px;
+        }
+        p{
+          font-size: 14px;
+        }
+      }
+
+      .footer-members{
+        p{
+          font-size: 11px;
+        }
+      }
+    }
+    
+    .footer-bottom{
+      p{
+        font-size: 11px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 720px) {
+    .footer-top {
+      margin-bottom: 20px;
+      .footer-title{
+        width: 55%;
+        margin-left: 5%;
+        h3{
+          font-size: 36px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+
+      .footer-members{
+        margin-right: 5%;
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    
+    .footer-bottom{
+      p{
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 920px) {
+    .footer-top {
+      margin-bottom: 25px;
+      .footer-title{
+        width: 52%;
+        margin-left: 10%;
+        h3{
+          font-size: 44px;
+        }
+        p{
+          font-size: 20px;
+        }
+      }
+
+      .footer-members{
+        margin-right: 10%;
+        padding-left: 2%;
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+    
+    .footer-bottom{
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .footer-top {
+      margin-bottom: 40px;
+      .footer-title{
+        width: 50%;
+        h3{
+          font-size: 45px;
+        }
+        p{
+          font-size: 23px;
+        }
+      }
+
+      .footer-members{
+        padding-left: 4%;
+        p{
+          font-size: 23px;
+        }
+      }
+    }
+    
+    .footer-bottom{
+      p{
+        font-size: 23px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .footer-top {
+      margin-bottom: 40px;
+      .footer-title{
+        width: 50%;
+        h3{
+          font-size: 45px;
+        }
+        p{
+          font-size: 28px;
+        }
+      }
+
+      .footer-members{
+        
+        p{
+          font-size: 28px;
+        }
+      }
+    }
+    
+    .footer-bottom{
+      p{
+        font-size: 28px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1530px) {
+    .footer-top {
+      margin-bottom: 40px;
+      margin-left: 2%;
+      margin-right: 2%;
+      .footer-title{
+        width: 38%;
+        padding-left: 5%;
+        h3{
+          font-size: 45px;
+        }
+        p{
+          font-size: 30px;
+        }
+      }
+
+      .footer-members{
+        width: 40%;
+        padding-left: 5%;
+        p{
+          font-size: 30px;
+        }
+      }
+    }
+    
+    .footer-bottom{
+      p{
+        font-size: 30px;
+      }
+    }
   }
 }
