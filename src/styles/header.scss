@@ -11,7 +11,7 @@ navigation-bar {
   font-family: sans-serif;
 
   .nav-title {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   #drawer {
@@ -109,7 +109,7 @@ navigation-bar {
             color: #000000;
             text-align: center;
             padding: 18px;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 400;
   
             &:hover {
@@ -129,13 +129,17 @@ navigation-bar {
   
   @media screen and (min-width: 1100px) {
     .nav-title{
+      font-size: 24px;
       margin-left: 10%;
     }
     .nav-list {
       margin-right: 10%;
 
-      ul li a {
-        font-size: 26px;
+      ul li {
+      margin-left: 10px;
+        a {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -150,6 +154,7 @@ navigation-bar {
 
       ul li{
         margin-right: 50px;
+        margin-left: 0px;
         a{
           font-size: 28px;
           font-weight: 400;
