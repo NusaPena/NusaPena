@@ -17,15 +17,15 @@ $quicksand: "quicksand", arial;
 html {
 	scroll-behavior: smooth;
 	scroll-padding: var(--scroll-padding, 5rem);
+	min-width: 357px;
 }
 
 body {
 	overflow-x: hidden;
-	background-color: black;
 }
 
 main {
-	min-height: 50svh;
+	min-height: 100svh;
 }
 
 ul {
@@ -49,4 +49,5 @@ textarea {
 }
 
 @import "header";
+@import "hero";
 @import "footer";
