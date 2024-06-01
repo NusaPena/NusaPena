@@ -7,9 +7,10 @@
 	box-sizing: border-box;
 }
 
-// $main-color: ;
-// $second-color: ;
-// $third-color: ;
+$white: #FFFFFF;
+$black: #2D2D2D;
+$yellow: #FDCD69;
+$green: #44643F;
 
 $montserrat: "montserrat", sans-serif;
 $quicksand: "quicksand", arial;
@@ -50,4 +51,5 @@ textarea {
 
 @import "header";
 @import "hero";
+@import "genre";
 @import "footer";
