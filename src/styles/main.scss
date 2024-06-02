@@ -23,6 +23,7 @@ html {
 
 body {
 	overflow-x: hidden;
+	font-family: $quicksand;
 }
 
 main {
@@ -53,3 +54,4 @@ textarea {
 @import "hero";
 @import "genre";
 @import "footer";
+@import "tentang";
