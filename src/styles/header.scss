@@ -4,11 +4,13 @@ navigation-bar {
   padding: 1.5rem;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: $white;
+  color: $black;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.08);
   position: fixed;
   z-index: 100;
   font-family: sans-serif;
+  top: 0;
 
   .nav-title {
     font-size: 24px;
@@ -21,13 +23,13 @@ navigation-bar {
     width: 40px;
     height: 40px;
     font-size: 30px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: $white;
+    color: $black;
     cursor: pointer;
     border: none;
     &:hover, &:focus {
-      color: #44643F;
-      outline: 3px solid #44643F;
+      color: $green;
+      outline: 3px solid $green;
     }
   }
     
@@ -37,7 +39,7 @@ navigation-bar {
     top: 108px;
     right: 0;
     width: 44%;
-    background-color: #ffffff;
+    background-color: $white;
     border-bottom-left-radius: 18px ;
       
     &.open {
@@ -55,14 +57,14 @@ navigation-bar {
         a {
           display: block;
           padding: 25px;
-          color: #000000;
-          text-decoration: none;
+          color: $black;
+      
           width: 100%;
           font-size: 17px;
           font-weight: 200;
           
           &:hover, &:focus {
-            color: #E0A324;
+            color: $yellow;
           }
         }
       }
@@ -105,21 +107,20 @@ navigation-bar {
         
         li {
           a {
-            text-decoration: none;
-            color: #000000;
+            color: $black;
             text-align: center;
             padding: 18px;
             font-size: 22px;
             font-weight: 400;
   
             &:hover {
-              color: black;
-              background-color: #FAE7B2;
+              color: $black;
+              background-color: $yellow;
               border-radius: 15px;
             }
 
             &:focus{
-              color: #000000;
+              color: $black;
             }
           }
         }
@@ -175,11 +176,10 @@ navigation-bar {
 
 #skip-link {
   position: absolute;
-  text-decoration: none;
   left: -300px;
   text-align: center;
-  background-color: #44643F;
-  color: #ffffff;
+  background-color: $green;
+  color: $white;
   padding: 10px 41px;
   z-index: 100;
   font-size: 30px;
@@ -187,15 +187,15 @@ navigation-bar {
   &:focus {
     left: 0;
     top: 20px;
-    outline: 3px solid #FAE7B2;
+    outline: 3px solid $yellow;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
     transition: 1s;
   }
   &:active{
-    color: #262626;
-    background-color: white;
-    outline: 3px solid #262626;
+    color: $black;
+    background-color: $white;
+    outline: 3px solid $black;
   }
 }
 }
