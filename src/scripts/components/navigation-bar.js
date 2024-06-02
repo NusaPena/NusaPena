@@ -20,7 +20,7 @@ class NavigationBar extends HTMLElement {
           <li><a href="#">Beranda</a></li>
           <li><a href="#">Cerita</a></li>
           <li><a href="#">Favorite</a></li>
-          <li><a href="#" target="_blank">Tentang Kami</a></li>
+          <li><a href="#/tentang">Tentang Kami</a></li>
         </ul>
       </nav>
     `;
