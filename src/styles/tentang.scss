@@ -1,0 +1,139 @@
+.tentang {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  margin-top: 100px;
+
+  h1 {
+    font-size: 24px; // Start with a smaller font size for mobile
+    margin: 10px 0;
+  }
+
+  h1 .bold{
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 14px; // Start with a smaller font size for mobile
+    line-height: 1.5;
+    color: #555;
+    max-width: 100%; // Full width on mobile
+    margin: 20px auto;
+  }
+
+  h2 {
+    font-size: 20px; // Start with a smaller font size for mobile
+    margin: 40px 0 20px;
+    font-family: "Lexend Mega", sans-serif;
+    color: #333;
+  }
+
+  .developer-container {
+    display: flex;
+    flex-direction: column; // Column layout for mobile
+    align-items: center;
+    gap: 20px;
+    margin: 0 20px;
+  }
+
+  .profile-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    h3 {
+      font-size: 18px; // Start with a smaller font size for mobile
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    p {
+      font-size: 14px;
+      color: #777;
+      margin: 5px 0;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+
+      .icon {
+        display: inline-block;
+        min-width: 44px;
+        min-height: 44px;
+        background-color: #ddd;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: #bbb;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: clamp(14px, 2vw, 18px);
+      max-width: 600px;
+    }
+
+    h2 {
+      font-size: clamp(20px, 3vw, 28px);
+    }
+
+    .developer-container {
+      flex-direction: row; // Switch to row layout for larger screens
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0px auto;
+    }
+
+    .profile-box {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      max-width: 800px;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+}

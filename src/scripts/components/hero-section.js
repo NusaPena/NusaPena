@@ -10,16 +10,17 @@ class HeroSection extends HTMLElement {
   render() {
     this.innerHTML = `
       <section class="hero">
-      <picture>
-        <source media="(min-width: 720px)" srcset="./images/heros/hero.png">
-        <img src="./images/heros/hero.png" alt="Hero Image">
-      </picture>
-      <div class="inner">
-        <p>Yuk Jelajahi Cerita Rakyat</p>
-        <p><b>Indonesia</b> Bersama</p>
-        <h1>NusaPena</h1>
-        <a href="#explore-section" id="hero-explore" class="skip-link" aria-label="Jelajahi Cerita">Mulai Jelajah</a>
-      </div>
+        <img class="hero_small" src="./images/heros/hero-small.png" alt="Hero Image">
+        <img class="hero_left" src="./images/heros/hero-left.png" alt="Hero Image">
+        <div class="inner">
+          <p>Yuk Jelajahi <b>Cerita Rakyat</b></p>
+          <p><b>Indonesia</b> Bersama</p>
+          <h1>NusaPena</h1>
+          <a href="#explore-section" id="hero-explore" class="skip-link" aria-label="Jelajahi Cerita"><span class="material-symbols-outlined">
+          footprint
+          </span> Mulai Jelajah</a>
+        </div>
+        <img class="hero_right" src="./images/heros/hero-right.png" alt="Hero Image">
       </section>
       `;
   }
