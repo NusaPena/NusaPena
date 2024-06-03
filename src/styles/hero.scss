@@ -39,8 +39,8 @@
       font-size: 25px;
       font-weight: 700;
       text-decoration: none;
-      background-color: #FDCD69;
-      color: #fff;
+      background-color: $yellow;
+      color: $white;
       border-radius: 15px;
       cursor: pointer;
       transition: background-color 0.3s ease;
@@ -52,14 +52,14 @@
       justify-content: center;
 
       &:hover {
-        color: #ffffff;
-        outline: 3px solid #ffffff;
+        color: $white;
+        outline: 3px solid $white;
       }
 
       &:active {
-        color: #b17609;
-        background-color: white;
-        outline: 3px solid #b17609;
+        color: $yellow;
+        background-color: $white;
+        outline: 3px solid $yellow;
       }
     }
 

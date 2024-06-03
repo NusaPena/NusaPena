@@ -5,7 +5,11 @@ const Tentang = {
         return `
         <tentang-kami></tentang-kami>
         `;
-    }
-}
+    },
+
+    async afterRender() {
+        console.log("test");
+    },
+};
 
 export default Tentang;
