@@ -57,6 +57,7 @@
       object-fit: cover;
       margin-bottom: 10px;
       transition: transform 0.3s ease;
+      background-color: black;
 
       &:hover {
         transform: scale(1.1);
@@ -81,17 +82,28 @@
       gap: 20px;
       margin-top: 15px;
 
-      .icon {
-        display: inline-block;
+      a {
+        display: flex;
         min-width: 44px;
         min-height: 44px;
-        background-color: #ddd;
+        background-color: white;
         border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease, transform 0.3s ease;
 
         &:hover {
           background-color: #bbb;
           transform: scale(1.1);
+        }
+        
+        svg{
+          display: flex;
+          margin: auto;
+          text-align: center;
+          align-content: center;
+          width: 25px;
+          height: 25px;
+          // background-color: black;
         }
       }
     }
