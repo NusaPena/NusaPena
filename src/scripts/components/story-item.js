@@ -36,43 +36,52 @@ class Storyitem extends HTMLElement {
           `;
 
 		this.applyCategoryStyle();
+
+		this.addEventListener("click", this.navigateToDetail);
+		this.addEventListener("keydown", (event) => {
+			if (event.key === "Enter") {
+				this.navigateToDetail();
+			}
+		});
 	}
 
 	applyCategoryStyle() {
+		const categoryMap = {
+			Fabel: {
+				class: "category-fable",
+				icon: "fa fa-paw",
+				text: "Fabel",
+			},
+			Sage: {
+				class: "category-sage",
+				icon: "fa fa-scroll",
+				text: "Sage",
+			},
+			Legenda: {
+				class: "category-legend",
+				icon: "far fa-flag",
+				text: "Legenda",
+			},
+			Dongeng: {
+				class: "category-dongeng",
+				icon: "fa fa-crown",
+				text: "Dongeng",
+			},
+		};
+
 		const { category } = this._storyItem;
 		const span = this.querySelector(".category-information");
-		if (category === "Fabel") {
-			span.classList.add("category-fable");
-			span.innerHTML = `
-                    <p><i class="fa fa-paw"></i> ${this._storyItem.category}</p>
-               `;
-		} else if (category === "Sage") {
-			span.classList.add("category-sage");
-			span.innerHTML = `
-                    <p><i class="fa fa-scroll"></i> ${this._storyItem.category}</p>
-               `;
-		} else if (category === "Legenda") {
-			span.classList.add("category-legend");
-			span.innerHTML = `
-                    <p><i class="far fa-flag"></i> ${this._storyItem.category}</p>
-               `;
-		} else if (category === "Dongeng") {
-			span.classList.add("category-dongeng");
-			span.innerHTML = `
-                    <p><i class="fa fa-crown"></i> ${this._storyItem.category}</p>
-               `;
-		}
-	}
-	// this.addEventListener("click", this.navigateToDetail);
-	// this.addEventListener("keydown", (event) => {
-	//      if (event.key === "Enter") {
-	//           this.navigateToDetail();
-	//      }
-	// });
+		const categoryInfo = categoryMap[category];
 
-	// navigateToDetail() {
-	// 	window.location.href = `#/details-page/${this._storyItem.id}`;
-	// }
+			if (categoryInfo) {
+				span.classList.add(categoryInfo.class);
+				span.innerHTML = `<p><i class="${categoryInfo.icon}"></i> ${categoryInfo.text}</p>`;
+			}
+	}
+
+	navigateToDetail() {
+		window.location.href = `#/details-page/${this._storyItem.id}`;
+	}
 }
 
 customElements.define("story-item", Storyitem);
