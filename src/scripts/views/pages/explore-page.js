@@ -4,22 +4,32 @@ const ExplorePage = {
 	async render() {
 		return `
                <section class="explore-section">
+				<story-navigation></story-navigation>
                     <story-list></story-list>
                </section>
           `;
 	},
 
 	async afterRender() {
-          const storyList = document.querySelector("story-list");
+          const storyList 	  = document.querySelector("story-list");
+		const storyNavigation = document.querySelector("story-navigation");
+			if (storyNavigation) {
+				storyNavigation.addEventListener("selectedCategory", (filterBtnEvent) => {
+					const { category } = filterBtnEvent.detail;
+						if (storyList) {
+							storyList.filterStories(category);
+						}
+				});
+			}
+
 		try {
 			const stories = await StorySource.getStoryList();
-			console.log("Fetched Stories: ", stories); // Log untuk melihat data stories
-
-			if (storyList) {
-				storyList.setStoryList(stories);
-			} else {
-				console.error("story-list element not found in the DOM");
-			}
+				console.log("Fetched Stories: ", stories);
+				if (storyList) {
+					storyList.setStoryList(stories);
+				} else {
+					console.error("story-list element not found in the DOM");
+				}
 		} catch (error) {
 			if (storyList) {
 				storyList.isError();
