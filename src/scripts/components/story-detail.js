@@ -13,13 +13,32 @@ class StoryDetail extends HTMLElement {
 		this.render();
 	}
 
+    isEmpty() {
+		const emptyMessage = document.createElement("h2");
+		emptyMessage.classList.add("empty");
+		emptyMessage.textContent = "Cerita Kosong!";
+		this.append(emptyMessage);
+	}
+
+	isError() {
+		const errorMessage = document.createElement("h2");
+		errorMessage.classList.add("error");
+		errorMessage.textContent = "Terjadi Kesalahan";
+		this.append(errorMessage);
+	}
+
 	getStoryDetails() {
 		return this._storyDetails;
 	}
 
 	setStoryDetails(story) {
-		this._storyDetails = story;
-		this.render();
+        try {
+            this._storyDetails = story;
+            this.render();
+       } catch (error) {
+            this.isError();
+            console.error(`An error occurred while setting story detail : ${error}`);
+       }
 	}
 
 	connectedCallback() {
