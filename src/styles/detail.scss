@@ -1,0 +1,451 @@
+.story-detail {
+    .detail-container {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      position: relative;
+      border: 2px #00000052 solid;
+      border-radius: 10px;
+    
+  
+      .picture-container {
+        flex: 2;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+  
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: inherit;
+          position: relative;
+          z-index: -1;
+        }
+  
+        @media screen and (min-width: 590px) {
+          height: 300px;
+        }
+      }
+  
+      .detail-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1.5;
+        padding: 1rem;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+  
+        .top-detail {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+  
+          .back {
+            width: 44px;
+            height: 44px;
+            color: $white;
+            background-color: transparent;
+            font-size: 30px;
+            border: 0;
+            text-decoration: none;
+  
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+  
+          .category-information {
+            padding: 0.5rem 0.5rem;
+            border-radius: 15px;
+            gap: 0.5rem;
+  
+            p {
+              text-align: center;
+              font-size: 14px;
+              font-weight: 600;
+            }
+  
+            @media screen and (min-width: 590px) {
+              padding: 0.5rem 1rem;
+  
+              p {
+                font-size: 1.2rem;
+              }
+            }
+          }
+  
+          .category-fable {
+            background-color: $blue;
+          }
+  
+          .category-sage {
+            background-color: $light-green;
+          }
+  
+          .category-legend {
+            background-color: $brown;
+          }
+  
+          .category-dongeng {
+            background-color: $pink;
+          }
+  
+          #like,
+          #unlike {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 0;
+            font-size: 30px;
+            color: #f24e1e;
+            cursor: pointer;
+            background-color: transparent;
+  
+            @media screen and (min-width: 590px) {
+              width: 55px;
+              height: 55px;
+            }
+          }
+        }
+  
+        .detail-title {
+          width: 100%;
+          font-size: 22px;
+          color: white;
+          text-align: center;
+          position: absolute;
+          bottom: 8px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+  
+          @media screen and (min-width: 590px) {
+            font-size: 1.7rem;
+            bottom: 15px;
+          }
+
+          @media screen and (min-width: 700px) {
+            font-size: 28px;
+          }
+        }
+  
+        .detail-synopsis {
+          display: none;
+        }
+      }
+    }
+  
+    .detail-content {
+      padding: 1.5rem;
+      background: linear-gradient(to bottom right, #ffffff, #f6f6f6);
+      color: #333333;
+      text-align: center;
+  
+      .detail-title {
+        display: none;
+      }
+  
+      .line {
+        display: none;
+      }
+  
+      .detail-desc {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: justify;
+        white-space: pre-wrap;
+  
+        @media screen and (min-width: 590px) {
+          font-size: 16px;
+        }
+
+        @media screen and (min-width: 700px) {
+            font-size: 18px;
+          }
+      }
+    }
+  
+    .detail-morals {
+      padding: 2.5rem;
+      margin: 1rem;
+      background: linear-gradient(to bottom right, #ffffff, #f6f6f6);
+      color: #333333;
+      text-align: center;
+      border: 2px #00000052 solid;
+      border-radius: 10px;
+  
+      &.fabel-border {
+        border: 3px solid $blue;
+      }
+  
+      &.sage-border {
+        border: 3px solid $light-green;
+      }
+  
+      &.legenda-border {
+        border: 3px solid $brown;
+      }
+  
+      &.dongeng-border {
+        border: 3px solid $pink;
+      }
+  
+      .morals-title {
+        font-size: 22px;
+
+        @media screen and (min-width: 590px) {
+            font-size: 1.7rem;
+            bottom: 15px;
+        }
+
+        @media screen and (min-width: 700px) {
+            font-size: 28px;
+        }
+      }
+  
+      .line {
+        display: block;
+        border-top: 3px solid #db920b;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+  
+      .fabel-line {
+        border-top: 3px solid $blue;
+      }
+  
+      .sage-line {
+        border-top: 3px solid $light-green;
+      }
+  
+      .legenda-line {
+        border-top: 3px solid $brown;
+      }
+  
+      .dongeng-line {
+        border-top: 3px solid $pink;
+      }
+  
+      .morals-text {
+        font-size: 14px;
+        line-height: 1.8;
+
+        @media screen and (min-width: 590px) {
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 700px) {
+            font-size: 18px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (min-width: 870px) {
+    .story-detail {
+      margin: 3rem 4rem;
+  
+      @media screen and (min-width: 1000px) {
+        margin: 3rem 6rem;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        margin: 3rem 8rem;
+      }
+  
+      .detail-container {
+        flex-direction: row;
+        overflow: hidden;
+        border: 2px #00000052 solid;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        position: unset;
+  
+        .picture-container {
+          flex: 1;
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+          position: unset;
+  
+          picture img,
+          picture source {
+            width: 100%;
+            height: 100%;
+  
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: inherit;
+              position: unset;
+            }
+          }
+        }
+  
+        .detail-info {
+          flex-direction: column;
+          text-align: justify;
+          flex: 1.5;
+          padding: 1rem;
+          align-items: flex-start;
+          gap: 1rem;
+          margin: 1rem 1.5rem;
+          position: relative;
+  
+          .top-detail {
+            justify-content: space-between;
+            align-items: center;
+  
+            .back {
+              display: none;
+            }
+  
+            .category-information {
+              padding: 0.5rem 1rem;
+              border-radius: 15px;
+              min-width: 120px;
+              gap: 0.5rem;
+  
+              p {
+                font-size: 1.2rem;
+                font-weight: 600;
+              }
+            }
+  
+            #like,
+            #unlike {
+              width: 55px;
+              height: 55px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              border: 0;
+              font-size: 30px;
+              color: #f24e1e;
+              cursor: pointer;
+              background-color: transparent;
+            }
+          }
+  
+          .detail-title {
+            text-align: left;
+            font-size: 2rem;
+            width: 100%;
+            color: $black;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            transform: translate(0, 0);
+          }
+  
+          .detail-synopsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            max-height: 6em;
+            line-height: 1.5em;
+            font-size: 19px;
+          }
+        }
+      }
+  
+      .detail-content {
+        padding: 2.5rem;
+        margin-bottom: 40px;
+        background: linear-gradient(to bottom right, #ffffff, #f6f6f6);
+        color: #333333;
+        text-align: center;
+        border: 2px #00000052 solid;
+        border-radius: 10px;
+  
+        .detail-title {
+          font-size: 2rem;
+          display: unset;
+        }
+  
+        .line {
+          display: block;
+          border-top: 3px solid #db920b;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 60%;
+        }
+  
+        .fabel-line {
+          border-top: 3px solid $blue;
+        }
+  
+        .sage-line {
+          border-top: 3px solid $light-green;
+        }
+  
+        .legenda-line {
+          border-top: 3px solid $brown;
+        }
+  
+        .dongeng-line {
+          border-top: 3px solid $pink;
+        }
+  
+        .detail-desc {
+          font-size: 19px;
+          line-height: 1.8;
+          text-align: justify;
+          margin-top: 10px;
+          white-space: pre-wrap;
+        }
+      }
+  
+      .detail-morals {
+        padding: 2.5rem;
+        background: linear-gradient(to bottom right, #ffffff, #f6f6f6);
+        color: #333333;
+        text-align: center;
+        border-radius: 10px;
+        margin: 0;
+
+        .morals-title{
+            font-size: 2rem;
+        }
+  
+        .line {
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 60%;
+        }
+  
+        .morals-text {
+          font-size: 19px;
+          line-height: 1.8;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  
