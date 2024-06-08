@@ -13,7 +13,11 @@ const Favorite = {
     const favoriteListElement = document.querySelector("story-list");
     const favoriteListData = await FavoriteStoryIdb.getAllStory();
     try {
-      favoriteListElement.setStoryList(favoriteListData);
+      if (favoriteListData.length === 0) {
+        favoriteListElement.isEmpty();
+      } else {
+        favoriteListElement.setStoryList(favoriteListData);
+      }
     } catch (error) {
       favoriteListElement.isError();
       console.error("An error occurred while fetching favorite story list.", error);
