@@ -18,8 +18,8 @@ class NavigationBar extends HTMLElement {
       <nav id="navList" class="nav-list">
         <ul>
           <li><a href="#">Beranda</a></li>
-          <li><a href="#">Cerita</a></li>
-          <li><a href="#">Favorite</a></li>
+          <li><a href="#/explore-page">Cerita</a></li>
+          <li><a href="#/favorite">Favorite</a></li>
           <li><a href="#/tentang">Tentang Kami</a></li>
         </ul>
       </nav>

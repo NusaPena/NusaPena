@@ -37,11 +37,15 @@ navigation-bar {
   .nav-list {
     transform: translateX(120%);
     position: absolute;
-    top: 108px;
+    top: 70px;
     right: 0;
     width: 44%;
     background-color: $white;
     border-bottom-left-radius: 18px ;
+
+    @media screen and (min-width: 600px) {
+      top: 97px;
+    }
       
     &.open {
       transform: translateX(0);
