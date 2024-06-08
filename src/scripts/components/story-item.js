@@ -80,7 +80,7 @@ class Storyitem extends HTMLElement {
 	}
 
 	navigateToDetail() {
-		window.location.href = `#/details-page/${this._storyItem.id}`;
+		window.location.href = `#/detail/${this._storyItem.id}`;
 	}
 }
 
