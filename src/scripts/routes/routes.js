@@ -1,15 +1,15 @@
-import Tentang from "../views/pages/tentang";
+import About from "../views/pages/about";
 import Main from "../views/pages/main";
-import ExplorePage from "../views/pages/explore-page";
+import Explore from "../views/pages/explore";
 import Favorite from "../views/pages/favorite";
 import Detail from "../views/pages/detail";
 
 const routes = {
     "/": Main,
-    "/explore-page": ExplorePage,
+    "/explore": Explore,
     "/favorite": Favorite,
     "/detail/:id": Detail,
-    "/tentang": Tentang,
+    "/about": About,
 };
 
 export default routes;
