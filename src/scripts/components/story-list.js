@@ -14,6 +14,13 @@ class StoryList extends HTMLElement {
 		this.append(emptyMessage);
 	}
 
+	categoryIsEmpty() {
+		const emptyCategoryMessage = document.createElement("h2");
+			emptyCategoryMessage.classList.add("empty");
+			emptyCategoryMessage.textContent = "Kategori Ini Tidak Memiliki Cerita";
+		this.append(emptyCategoryMessage);
+	}
+
 	isError() {
 		const errorMessage = document.createElement("h2");
 			errorMessage.classList.add("error");
@@ -29,12 +36,17 @@ class StoryList extends HTMLElement {
 	}
 
 	updateStoryList() {
+		this.clearMessages();
 		const storyContainer = this.querySelector(".story-items-container");
+			if (!storyContainer) {
+				return this.categoryIsEmpty();
+			}
+
 			storyContainer.innerHTML = "";
 				if (this._storyList.length === 0) {
 					this.isEmpty();
 				} else if (this._filteredStoryList.length === 0) {
-					storyContainer.innerHTML = "<h2 class='empty'>Kategori Ini Tidak Memiliki Cerita</h2>";
+					this.categoryIsEmpty();
 				} else {
 					storyContainer.append(
 						...this.createStoryItems(this._filteredStoryList),
@@ -47,8 +59,6 @@ class StoryList extends HTMLElement {
 		this.innerHTML = `
 			<div class="story-items-container"></div>
           `;
-
-		this.updateStoryList();
 	}
 
 	createStoryItems(stories) {
@@ -69,6 +79,11 @@ class StoryList extends HTMLElement {
 			);
 		}
 		this.updateStoryList();
+	}
+
+	clearMessages() {
+		const messages = this.querySelectorAll(".empty, .error");
+		messages.forEach((message) => message.remove());
 	}
 }
 

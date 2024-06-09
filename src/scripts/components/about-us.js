@@ -1,4 +1,4 @@
-class TentangKami extends HTMLElement {
+class AboutUs extends HTMLElement {
     constructor() {
         super();
     }
@@ -9,7 +9,7 @@ class TentangKami extends HTMLElement {
 
     render() {
         this.innerHTML = `
-      <section class="tentang">
+      <section class="about">
       <h1>Kenalan Yuk dengan</h1>
       <h1 class="bold">Nusa Pena</h1>
 
@@ -78,4 +78,4 @@ class TentangKami extends HTMLElement {
     }
 }
 
-customElements.define("tentang-kami", TentangKami);
+customElements.define("about-us", AboutUs);
