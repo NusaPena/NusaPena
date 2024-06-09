@@ -63,7 +63,7 @@ class StoryDetail extends HTMLElement {
     
                     <div class="detail-info">
                         <div class="top-detail">
-                            <button class="back"><a href="#/explore-page"><i class="fa-solid fa-arrow-left"></i></a></button>
+                            <button class="back"><a href="#/explore"><i class="fa-solid fa-arrow-left"></i></a></button>
                             <span class="category-information"></span>
                             <button class="like-button" aria-label="Favorite Button"></button>
                         </div>
