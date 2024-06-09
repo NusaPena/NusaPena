@@ -15,15 +15,15 @@ class StoryDetail extends HTMLElement {
 
     isEmpty() {
 		const emptyMessage = document.createElement("h2");
-		emptyMessage.classList.add("empty");
-		emptyMessage.textContent = "Cerita Kosong!";
+            emptyMessage.classList.add("empty");
+            emptyMessage.textContent = "Cerita Kosong!";
 		this.append(emptyMessage);
 	}
 
 	isError() {
 		const errorMessage = document.createElement("h2");
-		errorMessage.classList.add("error");
-		errorMessage.textContent = "Terjadi Kesalahan";
+            errorMessage.classList.add("error");
+            errorMessage.textContent = "Terjadi Kesalahan";
 		this.append(errorMessage);
 	}
 
@@ -35,10 +35,10 @@ class StoryDetail extends HTMLElement {
         try {
             this._storyDetails = story;
             this.render();
-       } catch (error) {
+        } catch (error) {
             this.isError();
             console.error(`An error occurred while setting story detail : ${error}`);
-       }
+        }
 	}
 
 	connectedCallback() {
@@ -56,7 +56,8 @@ class StoryDetail extends HTMLElement {
                 <div class="detail-container">
                     <div class="picture-container">
                         <picture class="detail-img">
-                            <img src="./images/templatecerita.png" alt="cerita">
+                        <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/large/${this._storyDetails.imageId}">
+                        <img src="http://localhost:5000/images/medium/${this._storyDetails.imageId}" alt="cerita">
                         </picture>
                     </div>
     
@@ -120,22 +121,22 @@ class StoryDetail extends HTMLElement {
 			span.classList.add("category-fable");
 			span.innerHTML = `
                     <p><i class="fa fa-paw"></i> ${this._storyDetails.category}</p>
-               `;
+            `;
 		} else if (category === "Sage") {
 			span.classList.add("category-sage");
 			span.innerHTML = `
                     <p><i class="fa fa-scroll"></i> ${this._storyDetails.category}</p>
-               `;
+            `;
 		} else if (category === "Legenda") {
 			span.classList.add("category-legend");
 			span.innerHTML = `
                     <p><i class="far fa-flag"></i> ${this._storyDetails.category}</p>
-               `;
+            `;
 		} else if (category === "Dongeng") {
 			span.classList.add("category-dongeng");
 			span.innerHTML = `
                     <p><i class="fa fa-crown"></i> ${this._storyDetails.category}</p>
-               `;
+            `;
 		}
 	}
 }
