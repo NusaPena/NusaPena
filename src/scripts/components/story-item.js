@@ -18,11 +18,11 @@ class Storyitem extends HTMLElement {
 		this.innerHTML = `
                <div class="item-container">
                     <div class="image-container">
-                         <picture class="resto-img">
+                         <picture>
                               <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/medium/${this._storyItem.imageId}">
                               <img
                                    src="http://localhost:5000/images/small/${this._storyItem.imageId}""
-                                   alt="Restoran ${this._storyItem.title}"
+                                   alt="Cerita ${this._storyItem.title}"
                               />
                          </picture>
                     </div>
