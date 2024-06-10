@@ -1,9 +1,9 @@
-import "../../components/tentang-kami";
+import "../../components/about-us";
 
-const Tentang = {
+const About = {
     async render() {
         return `
-        <tentang-kami></tentang-kami>
+            <about-us></about-us>
         `;
     },
 
@@ -12,4 +12,4 @@ const Tentang = {
     },
 };
 
-export default Tentang;
+export default About;
