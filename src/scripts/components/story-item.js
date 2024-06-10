@@ -30,7 +30,7 @@ class Storyitem extends HTMLElement {
                     <div class="details-container">
                          <span class="category-information"></span>
                          <h3 class="item-title">${this._storyItem.title}</h3>
-                         <p class="item-desc">${this._storyItem.storyDesc}</p>
+                         <p class="item-desc">${this._storyItem.synopsis}</p>
                     </div>
                </div>
           `;
