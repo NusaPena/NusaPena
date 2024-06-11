@@ -76,6 +76,19 @@ class AboutUs extends HTMLElement {
   </section>
         `;
     }
+
+    scrollToContent() {
+		const element = this.querySelector(".about");
+		const offset = 130;
+
+		const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+		const offsetPosition = elementPosition - offset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
+	}
 }
 
 customElements.define("about-us", AboutUs);

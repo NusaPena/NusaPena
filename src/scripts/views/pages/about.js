@@ -8,7 +8,10 @@ const About = {
     },
 
     async afterRender() {
-        console.log("test");
+        const aboutUs = document.querySelector("about-us");
+            if (aboutUs) {
+                aboutUs.scrollToContent();
+            }
     },
 };
 
