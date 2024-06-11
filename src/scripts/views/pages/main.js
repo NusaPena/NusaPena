@@ -1,4 +1,3 @@
-import "../../components/hero-section";
 import "../../components/genre-section";
 
 const Main = {

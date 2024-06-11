@@ -10,11 +10,12 @@ navigation-bar {
   box-shadow: 2px 2px 10px rgba(0,0,0,0.08);
   position: fixed;
   z-index: 100;
-  font-family: sans-serif;
+  font-family: $quicksand;
   top: 0;
 
   .nav-title {
     font-size: 24px;
+    font-family: $merienda;
   }
 
   #drawer {
@@ -37,11 +38,15 @@ navigation-bar {
   .nav-list {
     transform: translateX(120%);
     position: absolute;
-    top: 108px;
+    top: 70px;
     right: 0;
     width: 44%;
     background-color: $white;
     border-bottom-left-radius: 18px ;
+
+    @media screen and (min-width: 600px) {
+      top: 97px;
+    }
       
     &.open {
       transform: translateX(0);
@@ -185,6 +190,7 @@ navigation-bar {
   z-index: 100;
   font-size: 30px;
   line-height: 40px; 
+  font-family: $quicksand;
   &:focus {
     left: 0;
     top: 20px;

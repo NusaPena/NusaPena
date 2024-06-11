@@ -18,7 +18,7 @@ class FooterBar extends HTMLElement {
 
       <div class="footer-members">
         <p>F0016XB260 - Illinia Malika Putri </p>
-        <p>F2886YB302 - Muhammad Rafi Aria Sarosa</p>
+        <p>F2886YB302 - M. Rafi Aria Sarosa</p>
         <p>F2886YB360 - Ilham Alifio Daruwijaya</p>
       </div>
     </div>

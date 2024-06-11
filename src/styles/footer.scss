@@ -19,11 +19,13 @@ footer-bar {
 
       h3 {
         font-size: 19px;
+        font-family: $merienda;
       }
 
       p {
         font-size: 9px;
         font-weight: 200;
+        font-family: $quicksand;
       }
     }
 
@@ -74,7 +76,7 @@ footer-bar {
           font-size: 30px;
         }
         p{
-          font-size: 14px;
+          font-size: 13px;
         }
       }
 
@@ -92,7 +94,7 @@ footer-bar {
     }
   }
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 700px) {
     .footer-top {
       margin-bottom: 20px;
       .footer-title{
@@ -210,11 +212,9 @@ footer-bar {
   @media screen and (min-width: 1530px) {
     .footer-top {
       margin-bottom: 40px;
-      margin-left: 2%;
-      margin-right: 2%;
       .footer-title{
         width: 38%;
-        padding-left: 5%;
+        padding-right: 5%;
         h3{
           font-size: 45px;
         }

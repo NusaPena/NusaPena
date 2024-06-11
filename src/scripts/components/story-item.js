@@ -18,11 +18,11 @@ class Storyitem extends HTMLElement {
 		this.innerHTML = `
                <div class="item-container">
                     <div class="image-container">
-                         <picture class="resto-img">
+                         <picture>
                               <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/medium/${this._storyItem.imageId}">
                               <img
                                    src="http://localhost:5000/images/small/${this._storyItem.imageId}""
-                                   alt="Restoran ${this._storyItem.title}"
+                                   alt="Cerita ${this._storyItem.title}"
                               />
                          </picture>
                     </div>
@@ -30,7 +30,7 @@ class Storyitem extends HTMLElement {
                     <div class="details-container">
                          <span class="category-information"></span>
                          <h3 class="item-title">${this._storyItem.title}</h3>
-                         <p class="item-desc">${this._storyItem.storyDesc}</p>
+                         <p class="item-desc">${this._storyItem.synopsis}</p>
                     </div>
                </div>
           `;
@@ -80,7 +80,7 @@ class Storyitem extends HTMLElement {
 	}
 
 	navigateToDetail() {
-		window.location.href = `#/details-page/${this._storyItem.id}`;
+		window.location.href = `#/detail/${this._storyItem.id}`;
 	}
 }
 
