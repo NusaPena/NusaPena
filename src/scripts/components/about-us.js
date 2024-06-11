@@ -9,15 +9,15 @@ class AboutUs extends HTMLElement {
 
     render() {
         this.innerHTML = `
-      <section class="about">
-      <h1>Kenalan Yuk dengan</h1>
-      <h1 class="bold">Nusa Pena</h1>
+            <section class="about">
+                <h1>Kenalan Yuk dengan</h1>
+                <h1 class="bold">Nusa Pena</h1>
 
-      <p><b>NusaPena</b> adalah platform pembelajaran interaktif yang 
-          menawarkan pengalaman <b>membaca cerita rakyat Indonesia 
-          secara menyenangkan</b>, bertujuan untuk meningkatkan <b>literasi 
-          budaya dan kreativitas</b> anak-anak di era digital.
-      </p>
+                <p><b>NusaPena</b> adalah platform pembelajaran interaktif yang 
+                    menawarkan pengalaman <b>membaca cerita rakyat Indonesia 
+                    secara menyenangkan</b>, bertujuan untuk meningkatkan <b>literasi 
+                    budaya dan kreativitas</b> anak-anak di era digital.
+                </p>
 
       <h2>Our Developer</h2>
       <div class="developer-container">
@@ -58,6 +58,19 @@ class AboutUs extends HTMLElement {
   </section>
         `;
     }
+
+    scrollToContent() {
+		const element = this.querySelector(".about");
+		const offset = 130;
+
+		const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+		const offsetPosition = elementPosition - offset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
+	}
 }
 
 customElements.define("about-us", AboutUs);

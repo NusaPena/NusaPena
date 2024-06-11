@@ -4,6 +4,9 @@
   background-color: #f9f9f9;
   margin-top: 100px;
 
+  font-family: $quicksand;
+  color: $black;
+
   h1 {
     font-size: 24px; // Start with a smaller font size for mobile
     margin: 10px 0;
@@ -16,7 +19,7 @@
   p {
     font-size: 14px; // Start with a smaller font size for mobile
     line-height: 1.5;
-    color: #555;
+    opacity: 90%;
     max-width: 100%; // Full width on mobile
     margin: 20px auto;
   }
@@ -24,8 +27,6 @@
   h2 {
     font-size: 20px; // Start with a smaller font size for mobile
     margin: 40px 0 20px;
-    font-family: "Lexend Mega", sans-serif;
-    color: #333;
   }
 
   .developer-container {
@@ -37,7 +38,7 @@
   }
 
   .profile-box {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -57,7 +58,7 @@
       object-fit: cover;
       margin-bottom: 10px;
       transition: transform 0.3s ease;
-      background-color: black;
+      background-color: #000000;
 
       &:hover {
         transform: scale(1.1);
@@ -67,12 +68,11 @@
     h3 {
       font-size: 18px; // Start with a smaller font size for mobile
       margin: 10px 0 5px;
-      color: #333;
+      color: $black;
     }
 
     p {
       font-size: 14px;
-      color: #777;
       margin: 5px 0;
     }
 
@@ -82,17 +82,22 @@
       gap: 20px;
       margin-top: 15px;
 
-      a {
+      .icon {
         display: flex;
-        min-width: 44px;
-        min-height: 44px;
-        background-color: white;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.2rem;
+        color: $black;
+        background-color: $white;
+
         border-radius: 50%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease, transform 0.3s ease;
 
         &:hover {
-          background-color: #bbb;
+          color: $white;
+          background-color: $black;
           transform: scale(1.1);
         }
         
