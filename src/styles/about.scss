@@ -96,13 +96,12 @@
           transform: scale(1.1);
         }
         
-        svg{
+        i{
           display: flex;
           margin: auto;
           text-align: center;
           align-content: center;
-          width: 25px;
-          height: 25px;
+          color: #333;
           // background-color: black;
         }
       }
