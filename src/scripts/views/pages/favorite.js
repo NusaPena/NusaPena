@@ -14,6 +14,7 @@ const Favorite = {
 		const favoriteListElement = document.querySelector("story-list");
     const storyNavigation = document.querySelector("story-navigation");
       if (storyNavigation) {
+        storyNavigation.scrollToContent();
         storyNavigation.addEventListener("selectedCategory", (filterBtnEvent) => {
           const { category } = filterBtnEvent.detail;
             if (favoriteListElement) {
