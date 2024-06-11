@@ -34,7 +34,7 @@ class StoryNavigation extends HTMLElement {
 
      render() {
 		this.innerHTML = `
-               <div class="header-container">
+               <div class="story-nav-container">
                     <div class="head-container">
                          <h2>Mau Baca Apa Hari Ini?</h2>
                          <form>
@@ -60,6 +60,19 @@ class StoryNavigation extends HTMLElement {
           `;
 
           this.filterBtnListeners();
+	}
+
+     scrollToContent() {
+		const element = this.querySelector(".story-nav-container");
+		const offset = 130;
+
+		const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+		const offsetPosition = elementPosition - offset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
 	}
 }
 

@@ -98,10 +98,10 @@ class StoryDetail extends HTMLElement {
         }
 
         this.applyCategoryStyle();
-        this.scrollToDetail();
+        this.scrollToContent();
     }
 
-	scrollToDetail() {
+	scrollToContent() {
 		const element = this.querySelector(".story-detail");
 		const offset = 130;
 
