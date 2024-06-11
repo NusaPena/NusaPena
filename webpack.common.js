@@ -40,6 +40,22 @@ module.exports = {
 
 		new WorkboxWebpackPlugin.GenerateSW({
 			swDest: "./sw.bundle.js",
+			runtimeCaching: [
+				{
+					urlPattern: /^https:\/\/fonts\.gstatic\.com/,
+					handler: "CacheFirst",
+					options: {
+						cacheName: "google-fonts-webfonts-source",
+					},
+				},
+				{
+					urlPattern: ({ url }) => url.href.startsWith("https://kit.fontawesome.com/c9838309fd.js"),
+					handler: "StaleWhileRevalidate",
+					options: {
+						cacheName: "fontawesome-kit-source",
+					},
+				},
+			],
 		}),
 	],
 };
