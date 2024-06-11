@@ -10,11 +10,12 @@ navigation-bar {
   box-shadow: 2px 2px 10px rgba(0,0,0,0.08);
   position: fixed;
   z-index: 100;
-  font-family: sans-serif;
+  font-family: $quicksand;
   top: 0;
 
   .nav-title {
     font-size: 24px;
+    font-family: $merienda;
   }
 
   #drawer {
@@ -189,6 +190,7 @@ navigation-bar {
   z-index: 100;
   font-size: 30px;
   line-height: 40px; 
+  font-family: $quicksand;
   &:focus {
     left: 0;
     top: 20px;
