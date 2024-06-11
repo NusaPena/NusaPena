@@ -7,6 +7,7 @@ import "../styles/main.scss";
 import "./components/story-navigation";
 import "./components/story-list";
 import "./components/story-item";
+import "./components/story-detail";
 import "./components/personality-box";
 import "./data/personality-questions";
 

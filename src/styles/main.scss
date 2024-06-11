@@ -21,6 +21,7 @@ $brown: #b97365;
 
 $montserrat: "montserrat", sans-serif;
 $quicksand: "quicksand", arial;
+$merienda: "Merienda", cursive, sans-serif;
 
 html {
 	scroll-behavior: smooth;
@@ -98,8 +99,9 @@ textarea {
 @import "header";
 @import "hero";
 @import "genre";
+@import "detail";
 @import "footer";
-@import "tentang";
+@import "about";
 @import "explore";
 @import "personality-box";
 @import "personality";
