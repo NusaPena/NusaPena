@@ -1,31 +1,31 @@
 footer-bar {
   display: flex;
   flex-direction: column;
-  color: white;
-  background-color: #44643F;
+  color: $white;
+  background-color: $green;
   padding: 24px 10px;
   justify-content: center;
-  min-width: 357px;
 
   .footer-top{
     display: flex;
     justify-content: center;
     width: 100%;
     margin-bottom: 10px;
-    margin-top: 30px;
 
     .footer-title {
       width: 60%;
       margin: 10px;
-      border-right: 1px solid white;
+      border-right: 1px solid $white;
 
       h3 {
         font-size: 19px;
+        font-family: $merienda;
       }
 
       p {
         font-size: 9px;
         font-weight: 200;
+        font-family: $quicksand;
       }
     }
 
@@ -76,7 +76,7 @@ footer-bar {
           font-size: 30px;
         }
         p{
-          font-size: 14px;
+          font-size: 13px;
         }
       }
 
@@ -94,7 +94,7 @@ footer-bar {
     }
   }
 
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 700px) {
     .footer-top {
       margin-bottom: 20px;
       .footer-title{
@@ -212,11 +212,9 @@ footer-bar {
   @media screen and (min-width: 1530px) {
     .footer-top {
       margin-bottom: 40px;
-      margin-left: 2%;
-      margin-right: 2%;
       .footer-title{
         width: 38%;
-        padding-left: 5%;
+        padding-right: 5%;
         h3{
           font-size: 45px;
         }

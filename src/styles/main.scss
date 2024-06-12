@@ -7,25 +7,35 @@
 	box-sizing: border-box;
 }
 
-// $main-color: ;
-// $second-color: ;
-// $third-color: ;
+// * Primary Color Theme
+$white: #FFFFFF;
+$black: #2D2D2D;
+$yellow: #FDCD69;
+$green: #44643F;
+
+// * Additional Color
+$light-green: #53a053;
+$blue: #25abb3;
+$pink: #F09EA0;
+$brown: #b97365;
 
 $montserrat: "montserrat", sans-serif;
 $quicksand: "quicksand", arial;
+$merienda: "Merienda", cursive, sans-serif;
 
 html {
 	scroll-behavior: smooth;
 	scroll-padding: var(--scroll-padding, 5rem);
+	min-width: 357px;
 }
 
 body {
 	overflow-x: hidden;
-	background-color: black;
+	font-family: $quicksand;
 }
 
 main {
-	min-height: 50svh;
+	min-height: 100svh;
 }
 
 ul {
@@ -48,5 +58,50 @@ textarea {
 	min-height: 44px;
 }
 
+// * Universal Nontification
+.empty,
+.error {
+	grid-column: 1/-1;
+	padding: 10px;
+	margin: 50px 0;
+	text-align: center;
+	color: $black;
+
+	font-size: 1.5rem;
+	font-weight: 900;
+
+	@media screen and (min-width: 520px) {
+		font-size: 2rem;
+
+		@media screen and (min-width: 680px) {
+			font-size: 3rem;
+		}
+	}
+}
+
+// * Universal Container Styling
+@mixin bar-container {
+	padding: 1rem;
+
+	@media screen and (min-width: 600px) {
+		padding: 1.7rem;
+	}
+}
+
+@mixin content-container {
+	padding: 2rem 2.5rem;
+
+	@media screen and (min-width: 768px) {
+		padding: 3rem 4rem;
+	}
+}
+
 @import "header";
+@import "hero";
+@import "genre";
+@import "detail";
 @import "footer";
+@import "about";
+@import "explore";
+@import "personality-box";
+@import "personality";
