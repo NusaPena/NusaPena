@@ -16,8 +16,8 @@
         height: 200px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-  
-        img {
+        
+        picture, img {
           width: 100%;
           height: auto;
           object-fit: cover;
@@ -277,28 +277,50 @@
         border-radius: 10px;
         margin-bottom: 40px;
         position: unset;
-  
-        .picture-container {
-          flex: 1;
+  .picture-container {
+        flex: 1;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        position: unset;
+        height: auto; /* Allow it to expand with the container */
+
+        picture img,
+        picture source {
           width: 100%;
-          border-radius: 10px;
-          overflow: hidden;
-          position: unset;
-  
-          picture img,
-          picture source {
+          height: 100%;
+
+          img {
             width: 100%;
             height: 100%;
-  
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: inherit;
-              position: unset;
-            }
+            object-fit: cover;
+            border-radius: inherit;
+            position: unset;
           }
         }
+      }
+      .picture-container {
+        flex: 1;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        position: unset;
+        height: auto;
+
+        picture img,
+        picture source {
+          width: 100%;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            position: unset;
+          }
+        }
+      }
   
         .detail-info {
           flex-direction: column;
@@ -361,9 +383,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
-            max-height: 6em;
+            // -webkit-line-clamp: 5;
+            // -webkit-box-orient: vertical;
+            // max-height: 6em;
             line-height: 1.5em;
             font-size: 19px;
           }

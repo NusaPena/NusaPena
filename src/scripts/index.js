@@ -8,6 +8,9 @@ import "./components/story-navigation";
 import "./components/story-list";
 import "./components/story-item";
 import "./components/story-detail";
+import "./components/personality-box";
+import "./data/personality-questions";
+
 
 import App from "./views/app";
 import swRegister from "./utils/sw-register";

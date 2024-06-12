@@ -55,7 +55,7 @@ class StoryDetail extends HTMLElement {
             <section class="story-detail">
                 <div class="detail-container">
                     <div class="picture-container">
-                        <picture class="detail-img">
+                        <picture>
                         <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/large/${this._storyDetails.imageId}">
                         <img src="http://localhost:5000/images/medium/${this._storyDetails.imageId}" alt="cerita">
                         </picture>
@@ -68,7 +68,7 @@ class StoryDetail extends HTMLElement {
                             <button class="like-button" aria-label="Favorite Button"></button>
                         </div>
                         <h3 class="detail-title">${this._storyDetails.title}</h3>
-                        <p class="detail-synopsis">${this._storyDetails.storyDesc}</p>
+                        <p class="detail-synopsis">${this._storyDetails.synopsis}</p>
                     </div>
                 </div>
         
@@ -98,10 +98,10 @@ class StoryDetail extends HTMLElement {
         }
 
         this.applyCategoryStyle();
-        this.scrollToDetail();
+        this.scrollToContent();
     }
 
-	scrollToDetail() {
+	scrollToContent() {
 		const element = this.querySelector(".story-detail");
 		const offset = 130;
 
