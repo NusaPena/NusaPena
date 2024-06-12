@@ -1,0 +1,118 @@
+.personality-test {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: url("../public/images/heros/hero-right.png");
+    background-color: #80A681;
+
+    .test-container {
+        width: 90%;
+        min-height: 200px;
+        padding: 20px;
+        margin: 150px auto 0 auto;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 1000px;
+        
+        h1 {
+            font-size: 2em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .question-box {
+            width: 70%;
+            margin: 0 auto;
+
+            .question {
+                font-size: 1.5em;
+                margin: 20px 0px;
+                padding: 20px 0;
+                display: flex;
+            }
+
+            .options {
+                margin: 0 auto;
+
+                .option {
+                    display: flex;
+                    margin: 16px 0;
+                    padding: 10px;
+                    align-items: center;
+                    border: 2px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+
+                    span {
+                        margin-left: 10px;
+                    }
+
+                    &:hover {
+                        background-color: darken(#4eb5ff, 10%);
+                    }
+
+                }
+            }
+
+            .next {
+                background-color: #F8CE6A;
+                color: #fff;
+                border: none;
+                padding: 15px 20px;
+                border-radius: 10px;
+                cursor: pointer;
+                min-width: 44px;
+                min-height: 44px;
+                font-size: 25px;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 20px;
+
+                &:hover {
+                    box-shadow: #1e1e1e;
+                }
+
+                &:disabled {
+                    background-color: lighten(#F8CE6A, 20%);
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        .result {
+            max-width: 600px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 25px;
+
+            .highlight {
+                background-color: #F8CE6A;
+                padding: 10px;
+                text-align: center;
+                border-radius: 10px;
+                font-size: 30px;
+            }
+
+            .desc {
+                margin-top: 20px;
+            }
+        }
+
+        @media screen and (min-width: 870px) {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            padding: 20px;
+            margin: 120px auto 0 auto;
+        }
+
+        @media screen and (min-width: 1300px) {
+            width: 80%;
+        }
+    }
+}
