@@ -26,7 +26,7 @@ const Favorite = {
       try {
         const favoriteListData = await FavoriteStoryIdb.getAllStory();
           if (favoriteListData.length === 0) {
-            favoriteListElement.isEmpty();
+            favoriteListElement.setStoryList([]);
           } else {
             favoriteListElement.setStoryList(favoriteListData);
           }
