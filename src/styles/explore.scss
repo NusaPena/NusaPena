@@ -226,18 +226,17 @@
                // ? Mobile and Tablet
                @media screen and (min-width: 375px) {
                     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     
-                    // ? Desktop
-                    @media screen and (min-width: 992px) {
-                         grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
-                         gap: 2.5rem;
-     
-                         // ? Wide Screen
-                         @media screen and (min-width: 1080px) {
-                              grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
-                              gap: 2.5rem;
-                         }
-                    }
+               }
+               
+               // ? Desktop
+               @media screen and (min-width: 992px) {
+                    grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+                    gap: 2.5rem;
+               }
+               
+               // ? Wide Screen
+               @media screen and (min-width: 2000px) {
+                    grid-template-columns: repeat(2, minmax(50%, 1fr));
                }
           }
      }
@@ -246,7 +245,8 @@
           .item-container {
                display: flex;
                flex-flow: column wrap;
-               min-height: 500px;
+               flex-grow: 1;
+               min-height: 0;
                overflow: hidden;
                
                border: 2px rgba(0, 0, 0, 0.322) solid;
@@ -260,11 +260,21 @@
                     box-shadow: 0px 0px 20px $black;
                }
 
+               .item-location {
+                    background-color: $yellow;
+                    padding: 0.5rem 1rem;
+                    border-radius: 15px;
+                    min-width: 120px;
+                    gap: 0.5rem;
+
+                    text-align: center;
+               }
+
                .image-container {
-                    flex: 2;
                     width: 100%;
                     border-radius: 10px;
                     overflow: hidden;
+                    position: relative;
 
                     picture img,
                     picture source {
@@ -278,109 +288,170 @@
                               border-radius: inherit;
                          }
                     }
+
+                    .location-top {
+                         position: absolute;
+                         margin: 20px 0;
+                         width: fit-content;
+                         left: 50%;
+                         transform: translateX(-50%);
+                         z-index: 1;
+
+                         p {
+                              font-size: 0.8rem;
+                              font-weight: 600;
+
+                              @media screen and (min-width: 425px) {
+                                   font-size: 1.2rem;
+                              }
+
+                              @media screen and (min-width: 700px) {
+                                   font-size: 0.8rem;
+                              }
+
+                              @media screen and (min-width: 845px) {
+                                   font-size: 1.2rem;
+                              }
+                         }
+
+                         @media screen and (min-width: 992px) {
+                              display: none;
+                         }
+                    }
                }
 
                .details-container {
                     display: flex;
                     flex-flow: column nowrap;
                     flex: 2;
-                    padding: 1rem;
+                    flex-basis: 10px;
+                    padding: 2rem;
                     align-items: center;
                     gap: 1rem;
 
-                    margin: 1rem 1.5rem;
-
-
-                    .category-information {
-                         padding: 0.5rem 1rem;
-                         border-radius: 15px;
-                         min-width: 120px;
-                         gap: 0.5rem;
-
-                         text-align: center;
+                    .upper-information {
+                         display: flex;
+                         flex-flow: row nowrap;
+                         gap: 1rem;
 
                          p {
                               font-size: 1.2rem;
                               font-weight: 600;
                          }
+
+                         .location-bottom {
+                              display: none;
+                         }
+
+                         .item-category {
+                              padding: 0.5rem 1rem;
+                              border-radius: 15px;
+                              min-width: 120px;
+                              gap: 0.5rem;
+
+                              text-align: center;
+                         }
+
+                         .category-fable {
+                              background-color: $blue;
+                         }
+
+                         .category-sage {
+                              background-color: $light-green;
+                         }
+
+                         .category-legend {
+                              background-color: $brown;
+                         }
+
+                         .category-dongeng {
+                              background-color: $pink;
+                         }
+
+                         @media screen and (min-width: 992px) {
+                              .location-bottom {
+                                   display: block;
+                              }
+                         }
                     }
 
-                    .category-fable {
-                         background-color: $blue;
-                    }
+                    .bottom-information {
+                         display: flex;
+                         flex-flow: column nowrap;
+                         gap: 1rem;
 
-                    .category-sage {
-                         background-color: $light-green;
-                    }
-
-                    .category-legend {
-                         background-color: $brown;
-                    }
-
-                    .category-dongeng {
-                         background-color: $pink;
-                    }
-
-
-                    .item-title {
-                         text-align: center;
-                         font-size: 1.8rem;
-                    }
-
-                    .item-desc {
-                         --max-lines: 5;
-                         --padding-desc: 1.5rem;
-                         text-align: justify;
-                         line-height: 1.5rem;
-
-                         font-size: 0.8rem;
-                         font-weight: 500;
-
-                         // Menghitung tinggi berdasarkan nilai padding dan jumlah line yang ditampilkan
-                         max-height: calc(var(--padding-desc) * var(--max-lines));
-
-                         // -webkit untuk efek ellipsis
-                         display: -webkit-box;
-                         -webkit-box-orient: vertical;
-                         -webkit-line-clamp: var(--max-lines);
-                         overflow: hidden;
-                    }
-
-                    @media screen and (min-width: 600px) {
                          .item-title {
-                              font-size: 2rem;
+                              text-align: center;
+                              font-size: 1.8rem;
                          }
-
+     
                          .item-desc {
-                              --max-lines: 4;
-                              --padding-desc: 2rem;
-
-                              font-size: 1.1rem;
-                              line-height: 2rem;
+                              --max-lines: 5;
+                              --padding-desc: 1.5rem;
+                              text-align: justify;
+                              line-height: 1.5rem;
+     
+                              font-size: 0.8rem;
+                              font-weight: 500;
+     
+                              // Menghitung tinggi berdasarkan nilai padding dan jumlah line yang ditampilkan
+                              max-height: calc(var(--padding-desc) * var(--max-lines));
+     
+                              // -webkit untuk efek ellipsis
+                              display: -webkit-box;
+                              -webkit-box-orient: vertical;
+                              -webkit-line-clamp: var(--max-lines);
+                              overflow: hidden;
                          }
+     
+                         @media screen and (min-width: 600px) {
+                              .item-title {
+                                   font-size: 2rem;
+                              }
+     
+                              .item-desc {
+                                   --max-lines: 4;
+                                   --padding-desc: 2rem;
+     
+                                   font-size: 1.1rem;
+                                   line-height: 2rem;
+                              }
+                         }
+                    }
+                    
+                    @media screen and (min-width: 992px) {
+                         align-items: flex-start;
 
-                         @media screen and (min-width: 1024px) {
+                         .bottom-information {
                               align-items: flex-start;
+                              text-align: left;
                          }
                     }
                }
 
                @media screen and (min-width: 680px) {
                     min-height: 550px;
+               }
 
-                    @media screen and (min-width: 1024px) {
-                         display: flex;
-                         flex-flow: row nowrap;
-     
-                         text-align: center;
-                         min-height: 300px;
-                         @media screen and (min-width: 1024px) {
-                              text-align: justify;
-     
-                              .image-container {
-                                   flex: 1;
-                              }
-                         }
+               @media screen and (min-width: 992px) {
+                    display: flex;
+                    flex-flow: row wrap;
+                    min-height: 300px;
+
+                    .image-container {
+                         flex: 2;
+                    }                         
+               }
+
+               @media screen and (min-width: 1024px) {
+                    min-height: 300px;
+                    text-align: center;
+                    text-align: justify;
+               }
+
+               @media screen and (min-width: 1280px) {
+                    .image-container {
+                         flex: 1;
                     }
                }
           }

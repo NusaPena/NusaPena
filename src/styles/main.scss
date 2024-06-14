@@ -89,6 +89,7 @@ textarea {
 }
 
 @mixin content-container {
+	margin-top: 9rem;
 	padding: 2rem 2.5rem;
 
 	@media screen and (min-width: 768px) {

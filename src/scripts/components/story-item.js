@@ -18,6 +18,7 @@ class Storyitem extends HTMLElement {
 		this.innerHTML = `
                <div class="item-container">
                     <div class="image-container">
+					<span class="item-location location-top"><p>${this._storyItem.location}</p></span>
                          <picture>
                               <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/medium/${this._storyItem.imageId}">
                               <img
@@ -28,9 +29,14 @@ class Storyitem extends HTMLElement {
                     </div>
 
                     <div class="details-container">
-                         <span class="category-information"></span>
-                         <h3 class="item-title">${this._storyItem.title}</h3>
-                         <p class="item-desc">${this._storyItem.synopsis}</p>
+					<div class="upper-information">
+						<span class="item-category"></span>
+						<span class="item-location location-bottom"><p>${this._storyItem.location}</p></span>
+					</div>
+					<div class="bottom-information">
+						<h3 class="item-title">${this._storyItem.title}</h3>
+						<p class="item-desc">${this._storyItem.synopsis}</p>
+					</div>
                     </div>
                </div>
           `;
@@ -70,7 +76,7 @@ class Storyitem extends HTMLElement {
 		};
 
 		const { category } = this._storyItem;
-		const span = this.querySelector(".category-information");
+		const span = this.querySelector(".item-category");
 		const categoryInfo = categoryMap[category];
 
 			if (categoryInfo) {
