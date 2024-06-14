@@ -2,12 +2,12 @@ class GenreSection extends HTMLElement {
     constructor() {
       super();
     }
-  
+
     connectedCallback() {
       this.render();
       this.addEventListeners();
     }
-  
+
     render() {
       this.innerHTML = `
         <section class="genre">
@@ -46,36 +46,35 @@ class GenreSection extends HTMLElement {
         </section>
       `;
     }
-  
+
     addEventListeners() {
         const genreItems = this.querySelectorAll(".genre-item");
         const detailDialog = this.querySelector("#genre-detail");
         const detailTitle = this.querySelector("#detail-title");
         const detailDescription = this.querySelector("#detail-description");
         const closeDetailButton = this.querySelector("#close-detail-button");
-      
+
         const genreTitle = {
           fabel: "FABEL",
           sage: "SAGE",
           legenda: "LEGENDA",
-          dongeng: "DONGENG"
-        }
-      
+          dongeng: "DONGENG",
+        };
+
         const genreDescriptions = {
           fabel: "Fabel adalah cerita yang menggambarkan binatang berperilaku seperti manusia dan mengandung pesan moral.",
           sage: "Sage adalah cerita rakyat yang dianggap benar oleh yang punya cerita dan sering kali mengandung unsur sejarah.",
           legenda: "Legenda adalah cerita tentang asal-usul terjadinya suatu tempat atau fenomena alam.",
-          dongeng: "Dongeng adalah cerita khayalan yang tidak benar-benar terjadi dan hanya untuk hiburan."
+          dongeng: "Dongeng adalah cerita khayalan yang tidak benar-benar terjadi dan hanya untuk hiburan.",
         };
-      
-        genreItems.forEach(item => {
+
+        genreItems.forEach((item) => {
           item.addEventListener("click", () => {
             const genre = item.getAttribute("data-genre");
             detailTitle.innerText = genreTitle[genre];
             detailDescription.innerText = genreDescriptions[genre];
             detailDialog.showModal();
-      
-            // Add overlay
+
             const overlay = document.createElement("div");
             overlay.classList.add("detail-overlay");
             overlay.addEventListener("click", (event) => {
@@ -87,18 +86,16 @@ class GenreSection extends HTMLElement {
             document.body.appendChild(overlay);
           });
         });
-      
+
         closeDetailButton.addEventListener("click", () => {
             detailDialog.close();
-          
-            // Remove overlay
+
             const overlay = document.querySelector(".detail-overlay");
             if (overlay) {
               document.body.removeChild(overlay);
             }
           });
-          
-          // Close detail dialog when clicking outside
+
           window.addEventListener("click", (event) => {
             if (event.target === detailDialog) {
                 const overlay = document.querySelector(".detail-overlay");
@@ -110,6 +107,5 @@ class GenreSection extends HTMLElement {
         });
       }
     }
-    
+
     customElements.define("genre-section", GenreSection);
-  
