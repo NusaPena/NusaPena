@@ -105,28 +105,8 @@
             background-color: $pink;
           }
 
-          .item-location {
+          .item-origin {
             display: none;
-          //   background-color: $yellow;
-          //   padding: 0.5rem 0.5rem;
-          //   border-radius: 15px;
-          //   gap: 0.5rem;
-          //   flex-grow: 1;
-          //   margin-left: 0.1rem;
-
-          //   p {
-          //     text-align: center;
-          //     font-size: 14px;
-          //     font-weight: 600;
-          //   }
-
-          //   @media screen and (min-width: 590px) {
-          //     padding: 0.5rem 1rem;
-  
-          //     p {
-          //       font-size: 1.2rem;
-          //     }
-          //   }
           }
   
           #like,
@@ -191,7 +171,7 @@
         display: none;
       }
 
-      .detail-location{
+      .detail-origin{
         text-align: left;
         font-size: 14px;
         font-weight: 600;
@@ -399,7 +379,7 @@
               }
             }
   
-            .item-location {
+            .item-origin {
               display: unset;
               background-color: $yellow;
               padding: 0.5rem 1rem;
@@ -494,7 +474,7 @@
           border-top: 3px solid $pink;
         }
 
-        .detail-location{
+        .detail-origin{
           display: none;
         }
   
