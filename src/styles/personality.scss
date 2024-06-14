@@ -52,6 +52,7 @@
                     }
 
                     &:hover {
+                        color: $white;
                         background-color: darken(#4eb5ff, 10%);
                     }
 
@@ -74,6 +75,7 @@
 
                 &:hover {
                     box-shadow: #1e1e1e;
+                    background-color: $dark-yellow;
                 }
 
                 &:disabled {
