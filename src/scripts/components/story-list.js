@@ -58,7 +58,7 @@ class StoryList extends HTMLElement {
 						<div class="skeleton-content-container">
 							<div class="upper-skeleton">
 								<div class="category-skeleton"></div>
-								<div class="location-skeleton"></div>
+								<div class="origin-skeleton"></div>
 							</div>
 
 							<div class="bottom-skeleton">
