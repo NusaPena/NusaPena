@@ -7,6 +7,10 @@ class StoryList extends HTMLElement {
 		super();
 	}
 
+	connectedCallback() {
+		this.isLoadingItem();
+	}
+
 	isEmpty() {
 		const emptyMessage = document.createElement("h2");
 			emptyMessage.classList.add("empty");
@@ -35,12 +39,54 @@ class StoryList extends HTMLElement {
 		this.updateStoryList();
 	}
 
+	isLoadingItem() {
+		this.render();
+		const loadingContainer = this.querySelector(".loading-container");
+			if (!loadingContainer) {
+				console.error("loading-container not found");
+
+				return;
+			}
+			loadingContainer.innerHTML = "";
+
+			for (let item = 0; item < 8; item += 1) {
+				const itemSkeletonUI = document.createElement("div");
+					itemSkeletonUI.classList.add("item-skeleton-ui");
+					itemSkeletonUI.innerHTML = `
+						<div class="skeleton-img-container">
+							<div class="img-skeleton"></div>
+						</div>
+						<div class="skeleton-content-container">
+							<div class="upper-skeleton">
+								<div class="category-skeleton"></div>
+								<div class="location-skeleton"></div>
+							</div>
+
+							<div class="bottom-skeleton">
+								<div class="title-skeleton"></div>
+								<div class="paragraph-skeleton"></div>
+								<div class="paragraph-skeleton"></div>
+								<div class="paragraph-skeleton"></div>
+								<div class="paragraph-skeleton"></div>
+							</div>
+						</div>
+                         `;
+				loadingContainer.appendChild(itemSkeletonUI);
+			}
+	}
+
 	updateStoryList() {
 		this.clearMessages();
 		const storyContainer = this.querySelector(".story-items-container");
 			if (!storyContainer) {
-				return this.categoryIsEmpty();
+				return;
 			}
+
+			const loadingContainer = document.querySelector(".loading-container");
+				if (loadingContainer) {
+					loadingContainer.classList.remove("loading-container");
+					loadingContainer.style.display = "none";
+				}
 
 			storyContainer.innerHTML = "";
 				if (this._storyList.length === 0) {
@@ -57,6 +103,7 @@ class StoryList extends HTMLElement {
 	render() {
 		this.innerHTML = "";
 		this.innerHTML = `
+			<div class="loading-container"></div>
 			<div class="story-items-container"></div>
           `;
 	}
@@ -64,7 +111,7 @@ class StoryList extends HTMLElement {
 	createStoryItems(stories) {
 		return stories.map((story) => {
 			const newStoryitem = document.createElement("story-item");
-			newStoryitem.setStoryItem(story);
+				newStoryitem.setStoryItem(story);
 
 			return newStoryitem;
 		});
