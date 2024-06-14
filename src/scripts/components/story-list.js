@@ -12,24 +12,23 @@ class StoryList extends HTMLElement {
 	}
 
 	isEmpty() {
-		const emptyMessage = document.createElement("h2");
-			emptyMessage.classList.add("empty");
-			emptyMessage.textContent = "Daftar Cerita Kosong!";
-		this.append(emptyMessage);
+		this.showMessage("Daftar Cerita Kosong!");
 	}
 
 	categoryIsEmpty() {
-		const emptyCategoryMessage = document.createElement("h2");
-			emptyCategoryMessage.classList.add("empty");
-			emptyCategoryMessage.textContent = "Kategori Ini Tidak Memiliki Cerita";
-		this.append(emptyCategoryMessage);
+		this.showMessage("Kategori Ini Tidak Memiliki Cerita!");
 	}
 
 	isError() {
-		const errorMessage = document.createElement("h2");
-			errorMessage.classList.add("error");
-			errorMessage.textContent = "Terjadi Kesalahan";
-		this.append(errorMessage);
+		this.showMessage("Terjadi Kesalahan");
+	}
+
+	showMessage(message) {
+		this.clearMessages();
+		const messageElement = document.createElement("h2");
+			messageElement.classList.add("message");
+			messageElement.textContent = message;
+		this.append(messageElement);
 	}
 
 	setStoryList(stories) {
@@ -129,7 +128,7 @@ class StoryList extends HTMLElement {
 	}
 
 	clearMessages() {
-		const messages = this.querySelectorAll(".empty, .error");
+		const messages = this.querySelectorAll(".message, .error");
 		messages.forEach((message) => message.remove());
 	}
 }
