@@ -20,6 +20,8 @@ class StoryNavigation extends HTMLElement {
 			const element = this.querySelector(button.id);
                     if (element) {
                          element.addEventListener("click", () => {
+                              document.querySelector(".selected")?.classList.remove("selected");
+                              element.classList.add("selected");
                               const filterBtnEvent = new CustomEvent(
                                    "selectedCategory",
                                    {

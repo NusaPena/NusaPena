@@ -41,14 +41,14 @@
      
                          @media screen and (min-width: 768px) {
                               font-size: 2.4rem;
-     
-                              @media screen and (min-width: 992px) {
-                                   font-size: 2.5rem;
-     
-                                   @media screen and (min-width:1200px) {
-                                        font-size: 3.5rem;
-                                   }
-                              }
+                         }
+
+                         @media screen and (min-width: 992px) {
+                              font-size: 2.5rem;
+                         }
+
+                         @media screen and (min-width:1200px) {
+                              font-size: 3.5rem;
                          }
                     }
      
@@ -117,20 +117,20 @@
                     @media screen and (min-width: 600px) {
                          grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
                          width: 75%;
-     
-                         @media screen and (min-width: 768px) {
-                              grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-                              width: 95%;
-     
-                              @media screen and (min-width: 992px) {
-                                   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-                                   width: 90%;
-     
-                                   @media screen and (min-width: 1024px) {
-                                        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                                   }
-                              }
-                         }
+                    }
+                    
+                    @media screen and (min-width: 768px) {
+                         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                         width: 95%;
+                    }
+                    
+                    @media screen and (min-width: 992px) {
+                         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                         width: 90%;
+                    }
+                    
+                    @media screen and (min-width: 1024px) {
+                         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                     }
      
                     button {
@@ -150,65 +150,74 @@
      
                          &:hover {
                               transition-duration: 0.5s;
-                              border: 2px $black solid;
                          }
-     
+
                          @media screen and (min-width: 680px) {
                               padding: 0 1rem;
-     
-                              @media screen and (min-width: 768px) {
-                                   padding: 0 2rem;
-     
-                                   @media screen and (min-width: 1024px) {
-                                        padding: 0 2rem;
-                                        font-size: 1.5rem;
-                                   }
-                              }
                          }
+
+                         @media screen and (min-width: 768px) {
+                              padding: 0 2rem;
+                         }
+
+                         @media screen and (min-width: 1024px) {
+                              padding: 0 2rem;
+                              font-size: 1.5rem;
+                         }          
                     }
      
                     #show-all-btn {
                          background-color: $yellow;
      
-                         &:hover {
+                         &:hover,
+                         &.selected {
                               box-shadow: 0 0 20px 2px $yellow;
                               font-weight: bolder;
+                              border: 2px $black solid;
                          }
                     }
      
                     #show-fable-btn {
                          background-color: $blue;
      
-                         &:hover {
+                         &:hover,
+                         &.selected {
                               box-shadow: 0 0 20px 2px $blue;
                               font-weight: bolder;
+                              border: 2px $black solid;
                          }
                     }
      
                     #show-sage-btn {
                          background-color: $light-green;
      
-                         &:hover {
+                         &:hover,
+                         &.selected {
                               box-shadow: 0 0 20px 2px $light-green;
                               font-weight: bolder;
+                              border: 2px $black solid;
                          }
                     }
      
                     #show-legend-btn {
                          background-color: $brown;
      
-                         &:hover {
+                         &:hover,
+                         &.selected {
                               box-shadow: 0 0 20px 2px $brown;
                               font-weight: bolder;
+                              border: 2px $black solid;
                          }
                     }
      
                     #show-fairly-tale-btn {
                          background-color: $pink;
      
-                         &:hover {
+                         &:hover,
+                         &.selected {
                               box-shadow: 0 0 20px 2px $pink;
                               font-weight: bolder;
+                              border: 2px $black solid;
                          }
                     }
                }
@@ -392,10 +401,10 @@
                                         font-size: 0.8rem;
                                         font-weight: 500;
                
-                                        // Menghitung tinggi berdasarkan nilai padding dan jumlah line yang ditampilkan
+                                        // ? Menghitung tinggi berdasarkan nilai padding dan jumlah line yang ditampilkan
                                         max-height: calc(var(--padding-desc) * var(--max-lines));
                
-                                        // -webkit untuk efek ellipsis
+                                        // ? -webkit untuk efek ellipsis
                                         display: -webkit-box;
                                         -webkit-box-orient: vertical;
                                         -webkit-line-clamp: var(--max-lines);
@@ -586,20 +595,21 @@
 
                     @media screen and (min-width: 680px) {
                          min-height: 550px;
-     
-                         @media screen and (min-width: 1024px) {
-                              display: flex;
-                              flex-flow: row nowrap;
-          
-                              text-align: center;
-                              min-height: 300px;
-                              @media screen and (min-width: 1024px) {
-                                   text-align: justify;
-          
-                                   .skeleton-img-container {
-                                        flex: 1;
-                                   }
-                              }
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                         display: flex;
+                         flex-flow: row nowrap;
+
+                         text-align: center;
+                         min-height: 300px;
+                    }
+
+                    @media screen and (min-width: 1024px) {
+                         text-align: justify;
+
+                         .skeleton-img-container {
+                              flex: 1;
                          }
                     }
                }
