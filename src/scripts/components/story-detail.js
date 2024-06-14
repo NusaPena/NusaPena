@@ -81,7 +81,7 @@ class StoryDetail extends HTMLElement {
                         <div class="top-detail">
                             <button class="back"><i class="fa-solid fa-arrow-left"></i></button>
                             <span class="category-information"></span>
-                            <span class="item-location"><p>${this._storyDetails.location}</p></span>
+                            <span class="item-origin"><p>${this._storyDetails.origin}</p></span>
                             <button class="like-button" aria-label="Favorite Button"></button>
                         </div>
                         <h3 class="detail-title">${this._storyDetails.title}</h3>
@@ -92,7 +92,7 @@ class StoryDetail extends HTMLElement {
                 <div class="detail-content">
                     <h3 class="detail-title ">${this._storyDetails.title}</h3>
                     <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
-                    <p class="detail-location">Asal : ${this._storyDetails.location}</p>
+                    <p class="detail-origin">Asal : ${this._storyDetails.origin}</p>
                     <p class="detail-desc">${this._storyDetails.storyDesc}</p>
                 </div>
     
