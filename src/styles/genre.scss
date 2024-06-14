@@ -62,7 +62,6 @@
         border-radius: 15px;
         margin-top: 5px;
         border: none;
-        box-shadow: 0 4px 8px $black;
         text-align: center;
         position: fixed;
         top: 50%;
@@ -71,8 +70,7 @@
         background: $white;
         z-index: 1000;
         border: 3px solid $yellow;
-        font-family: sans-serif;
-
+        
         h3{
             font-size: 21px;
         }
@@ -100,7 +98,7 @@
         font-size: 14px;
 
         &:hover {
-            background-color: $yellow;
+            background-color: $dark-yellow;
           }
       }
       

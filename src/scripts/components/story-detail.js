@@ -27,6 +27,22 @@ class StoryDetail extends HTMLElement {
 		this.append(errorMessage);
 	}
 
+    isLoading() {
+        this.innerHTML = `
+        <div class="story-detail-skeleton">
+          <div class="detail-skeleton-image"></div>
+          <div class="detail-skeleton-title"></div>
+          <div class="detail-skeleton-text"></div>
+          <div class="detail-skeleton-text"></div>
+          <div class="detail-skeleton-text"></div>
+          <div class="detail-skeleton-text"></div>
+          <div class="detail-skeleton-text"></div>
+          <div class="detail-skeleton-text"></div>
+          <div class="detail-skeleton-morals"></div>
+        </div>
+      `;
+   }
+
 	getStoryDetails() {
 		return this._storyDetails;
 	}
@@ -42,7 +58,7 @@ class StoryDetail extends HTMLElement {
 	}
 
 	connectedCallback() {
-		this.render();
+		this.isLoading();
 	}
 
     render() {
@@ -63,8 +79,9 @@ class StoryDetail extends HTMLElement {
     
                     <div class="detail-info">
                         <div class="top-detail">
-                            <button class="back"><a href="#/explore"><i class="fa-solid fa-arrow-left"></i></a></button>
+                            <button class="back"><i class="fa-solid fa-arrow-left"></i></button>
                             <span class="category-information"></span>
+                            <span class="item-location"><p>${this._storyDetails.location}</p></span>
                             <button class="like-button" aria-label="Favorite Button"></button>
                         </div>
                         <h3 class="detail-title">${this._storyDetails.title}</h3>
@@ -75,6 +92,7 @@ class StoryDetail extends HTMLElement {
                 <div class="detail-content">
                     <h3 class="detail-title ">${this._storyDetails.title}</h3>
                     <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
+                    <p class="detail-location">Asal : ${this._storyDetails.location}</p>
                     <p class="detail-desc">${this._storyDetails.storyDesc}</p>
                 </div>
     
@@ -85,6 +103,11 @@ class StoryDetail extends HTMLElement {
                 </div>
             </section>
         `;
+
+        const backButton = this.querySelector(".back");
+        backButton.addEventListener("click", () => {
+            window.history.back();
+        });
 
         const likeButton = this.querySelector(".like-button");
         if (this._favorite === "true") {
