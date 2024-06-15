@@ -16,7 +16,7 @@ class PersonalityBox extends HTMLElement {
                     <p>Yuk coba ikuti personality quiz untuk tau!</p>
                 </div>
                 <div class="right">
-                    <a href="#/personality">TEST SEKARANG</a>
+                    <a id="personality-button" href="#/personality">TEST SEKARANG</a>
                 </div>
             </div>
         </section>
