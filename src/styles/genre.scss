@@ -300,5 +300,37 @@
                     font-size: 40px;  
                 }
         }
+
+        #genre-detail {
+            width: 600px;
+            h3{
+                font-size: 35px;
+            }
+
+            p{
+                font-size: 25px;
+            }
+        }
+
+        #close-detail-button {
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (min-width: 1900px) {
+        #genre-detail {
+            width: 750px;
+            h3{
+                font-size: 45px;
+            }
+
+            p{
+                font-size: 35px;
+            }
+        }
+
+        #close-detail-button {
+            font-size: 35px;
+        }
     }
 }
