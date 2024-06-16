@@ -158,7 +158,7 @@
                          font-family: $quicksand;
 
                          &:hover {
-                              transition-duration: 0.5s;
+                              transition-duration: 0.1s;
                          }
 
                          @media screen and (min-width: 680px) {
@@ -180,9 +180,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $yellow;
+                              box-shadow: 0 0 10px 2px $yellow;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -191,9 +191,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $blue;
+                              box-shadow: 0 0 10px 2px $blue;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -202,9 +202,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $light-green;
+                              box-shadow: 0 0 10px 2px $light-green;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -213,9 +213,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $brown;
+                              box-shadow: 0 0 10px 2px $brown;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -224,9 +224,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $pink;
+                              box-shadow: 0 0 10px 2px $pink;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
                }
