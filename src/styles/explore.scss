@@ -668,20 +668,10 @@
           font-weight: 600;
           align-self: flex-end;
 
-          @media screen and (min-width: 375px) {}
-
-          @media screen and (min-width: 500px) {}
-
-          @media screen and (min-width: 720px) {}
-
           @media screen and (min-width: 920px) {
                font-weight: 600;
                font-size: 25px;
                padding: 20px 30px;
           }
-
-          @media screen and (min-width: 1200px) {}
-
-          @media screen and (min-width: 1400px) {}
      }
 }
