@@ -26,8 +26,8 @@ class StoryList extends HTMLElement {
 	showMessage(message) {
 		this.clearMessages();
 		const messageElement = document.createElement("h2");
-			messageElement.classList.add("message");
-			messageElement.textContent = message;
+		messageElement.classList.add("message");
+		messageElement.textContent = message;
 		this.append(messageElement);
 	}
 
@@ -38,20 +38,27 @@ class StoryList extends HTMLElement {
 		this.updateStoryList();
 	}
 
+	setPreviewStoryList(stories) {
+		this._storyList = stories;
+		this._filteredStoryList = stories;
+		this.render();
+		this.previewStoryList();		
+	}
+
 	isLoadingItem() {
 		this.render();
 		const loadingContainer = this.querySelector(".loading-container");
-			if (!loadingContainer) {
-				console.error("loading-container not found");
+		if (!loadingContainer) {
+			console.error("loading-container not found");
 
-				return;
-			}
-			loadingContainer.innerHTML = "";
+			return;
+		}
+		loadingContainer.innerHTML = "";
 
-			for (let item = 0; item < 8; item += 1) {
-				const itemSkeletonUI = document.createElement("div");
-					itemSkeletonUI.classList.add("item-skeleton-ui");
-					itemSkeletonUI.innerHTML = `
+		for (let item = 0; item < 8; item += 1) {
+			const itemSkeletonUI = document.createElement("div");
+			itemSkeletonUI.classList.add("item-skeleton-ui");
+			itemSkeletonUI.innerHTML = `
 						<div class="skeleton-img-container">
 							<div class="img-skeleton"></div>
 						</div>
@@ -70,33 +77,59 @@ class StoryList extends HTMLElement {
 							</div>
 						</div>
                          `;
-				loadingContainer.appendChild(itemSkeletonUI);
-			}
+			loadingContainer.appendChild(itemSkeletonUI);
+		}
 	}
 
 	updateStoryList() {
 		this.clearMessages();
 		const storyContainer = this.querySelector(".story-items-container");
-			if (!storyContainer) {
-				return;
-			}
+		if (!storyContainer) {
+			return;
+		}
 
-			const loadingContainer = document.querySelector(".loading-container");
-				if (loadingContainer) {
-					loadingContainer.classList.remove("loading-container");
-					loadingContainer.style.display = "none";
-				}
+		const loadingContainer = document.querySelector(".loading-container");
+		if (loadingContainer) {
+			loadingContainer.classList.remove("loading-container");
+			loadingContainer.style.display = "none";
+		}
 
-			storyContainer.innerHTML = "";
-				if (this._storyList.length === 0) {
-					this.isEmpty();
-				} else if (this._filteredStoryList.length === 0) {
-					this.categoryIsEmpty();
-				} else {
-					storyContainer.append(
-						...this.createStoryItems(this._filteredStoryList),
-					);
-				}
+		storyContainer.innerHTML = "";
+		if (this._storyList.length === 0) {
+			this.isEmpty();
+		} else if (this._filteredStoryList.length === 0) {
+			this.categoryIsEmpty();
+		} else {
+			storyContainer.append(
+				...this.createStoryItems(this._filteredStoryList),
+			);
+		}
+	}
+
+	previewStoryList() {
+		this.clearMessages();
+		const storyContainer = this.querySelector(".story-items-container");
+		if (!storyContainer) {
+			return;
+		}
+
+		const loadingContainer = document.querySelector(".loading-container");
+		if (loadingContainer) {
+			loadingContainer.classList.remove("loading-container");
+			loadingContainer.style.display = "none";
+		}
+
+		storyContainer.innerHTML = "";
+		if (this._storyList.length === 0) {
+			this.isEmpty();
+		} else if (this._filteredStoryList.length === 0) {
+			this.categoryIsEmpty();
+		} else {
+			const limitedStories = this._filteredStoryList.slice(0, 4);
+			storyContainer.append(
+				...this.createStoryItems(limitedStories),
+			);
+		}
 	}
 
 	render() {
@@ -110,7 +143,7 @@ class StoryList extends HTMLElement {
 	createStoryItems(stories) {
 		return stories.map((story) => {
 			const newStoryitem = document.createElement("story-item");
-				newStoryitem.setStoryItem(story);
+			newStoryitem.setStoryItem(story);
 
 			return newStoryitem;
 		});

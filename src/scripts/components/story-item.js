@@ -22,7 +22,7 @@ class Storyitem extends HTMLElement {
                          <picture>
                               <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/medium/${this._storyItem.imageId}">
                               <img
-                                   src="http://localhost:5000/images/small/${this._storyItem.imageId}""
+                                   src="http://localhost:5000/images/small/${this._storyItem.imageId}"
                                    alt="Cerita ${this._storyItem.title}"
                               />
                          </picture>
