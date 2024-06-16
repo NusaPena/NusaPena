@@ -4,6 +4,8 @@
      flex-direction: column;
      align-items: center;
      text-align: center;
+     max-width: 1450px;
+     margin: 0 auto;
 
      story-navigation {
           margin-top: 6rem;
@@ -435,7 +437,7 @@
                                         text-align: justify;
                                         line-height: 1.5rem;
 
-                                        font-size: 0.8rem;
+                                        font-size: 1rem;
                                         font-weight: 500;
 
                                         // ? Menghitung tinggi berdasarkan nilai padding dan jumlah line yang ditampilkan
