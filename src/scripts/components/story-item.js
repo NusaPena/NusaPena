@@ -65,7 +65,7 @@ class Storyitem extends HTMLElement {
 			},
 			Legenda: {
 				class: "category-legend",
-				icon: "far fa-flag",
+				icon: "fa-solid fa-flag",
 				text: "Legenda",
 			},
 			Dongeng: {
