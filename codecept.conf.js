@@ -21,4 +21,9 @@ exports.config = {
 		I: "./steps_file.js",
 	},
 	name: "nusa-pena",
+	plugins: {
+		screenshotOnFail: {
+			enabled: false,
+		},
+	},
 };

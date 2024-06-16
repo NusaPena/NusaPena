@@ -11,6 +11,7 @@
 $white: #FFFFFF;
 $black: #2D2D2D;
 $yellow: #FDCD69;
+$dark-yellow:#edb742;
 $green: #44643F;
 
 // * Additional Color
@@ -89,7 +90,7 @@ textarea {
 }
 
 @mixin content-container {
-	margin-top: 9rem;
+	margin-top: 1rem;
 	padding: 2rem 2.5rem;
 
 	@media screen and (min-width: 768px) {

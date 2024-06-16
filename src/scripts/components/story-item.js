@@ -18,11 +18,11 @@ class Storyitem extends HTMLElement {
 		this.innerHTML = `
                <div class="item-container">
                     <div class="image-container">
-					<span class="item-location location-top"><p>${this._storyItem.location}</p></span>
+					<span class="item-origin origin-top"><p>${this._storyItem.origin}</p></span>
                          <picture>
                               <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/medium/${this._storyItem.imageId}">
                               <img
-                                   src="http://localhost:5000/images/small/${this._storyItem.imageId}""
+                                   src="http://localhost:5000/images/small/${this._storyItem.imageId}"
                                    alt="Cerita ${this._storyItem.title}"
                               />
                          </picture>
@@ -31,7 +31,7 @@ class Storyitem extends HTMLElement {
                     <div class="details-container">
 					<div class="upper-information">
 						<span class="item-category"></span>
-						<span class="item-location location-bottom"><p>${this._storyItem.location}</p></span>
+						<span class="item-origin origin-bottom"><p>${this._storyItem.origin}</p></span>
 					</div>
 					<div class="bottom-information">
 						<h3 class="item-title">${this._storyItem.title}</h3>
@@ -65,7 +65,7 @@ class Storyitem extends HTMLElement {
 			},
 			Legenda: {
 				class: "category-legend",
-				icon: "far fa-flag",
+				icon: "fa-solid fa-flag",
 				text: "Legenda",
 			},
 			Dongeng: {

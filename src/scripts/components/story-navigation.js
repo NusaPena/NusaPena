@@ -55,7 +55,7 @@ class StoryNavigation extends HTMLElement {
                          <button id="show-all-btn">Semua</button>
                          <button id="show-fable-btn"><i class="fa-solid fa-paw"></i> Fabel</button>
                          <button id="show-sage-btn"><i class="fa-solid fa-scroll"></i> Sage</button>
-                         <button id="show-legend-btn"><i class="fa-regular fa-flag"></i> Legenda</button>
+                         <button id="show-legend-btn"><i class="fa-solid fa-flag"></i> Legenda</button>
                          <button id="show-fairly-tale-btn"><i class="fa-solid fa-crown"></i> Dongeng</button>
                     </div>
                </div>

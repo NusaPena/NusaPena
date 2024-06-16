@@ -1,4 +1,5 @@
 .story-detail {
+  margin-top: 6rem;
     .detail-container {
       display: flex;
       flex-direction: row;
@@ -6,7 +7,6 @@
       position: relative;
       border: 2px #00000052 solid;
       border-radius: 10px;
-    
   
       .picture-container {
         flex: 2;
@@ -59,6 +59,7 @@
             font-size: 30px;
             border: 0;
             text-decoration: none;
+            margin-right: 1rem;
   
             a {
               text-decoration: none;
@@ -67,14 +68,16 @@
           }
   
           .category-information {
-            padding: 0.5rem 0.5rem;
+            // flex-grow: 1; 
+            text-align: center;
+            padding: 0.5rem;
             border-radius: 15px;
-            gap: 0.5rem;
+            margin-right: 0.5rem;
   
             p {
-              text-align: center;
               font-size: 14px;
               font-weight: 600;
+              margin: 0;
             }
   
             @media screen and (min-width: 590px) {
@@ -101,6 +104,10 @@
           .category-dongeng {
             background-color: $pink;
           }
+
+          .item-origin {
+            display: none;
+          }
   
           #like,
           #unlike {
@@ -115,6 +122,7 @@
             color: #f24e1e;
             cursor: pointer;
             background-color: transparent;
+            margin-left: 1rem;
   
             @media screen and (min-width: 590px) {
               width: 55px;
@@ -162,6 +170,21 @@
       .line {
         display: none;
       }
+
+      .detail-origin{
+        text-align: left;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
+        @media screen and (min-width: 590px) {
+          font-size: 16px;
+        }
+
+        @media screen and (min-width: 700px) {
+          font-size: 18px;
+        }
+      }
   
       .detail-desc {
         font-size: 14px;
@@ -175,7 +198,7 @@
 
         @media screen and (min-width: 700px) {
             font-size: 18px;
-          }
+        }
       }
     }
   
@@ -261,13 +284,16 @@
   @media screen and (min-width: 870px) {
     .story-detail {
       margin: 3rem 4rem;
+      margin-top: 10rem;
   
       @media screen and (min-width: 1000px) {
         margin: 3rem 6rem;
+        margin-top: 10rem;
       }
   
       @media screen and (min-width: 1200px) {
         margin: 3rem 8rem;
+        margin-top: 10rem;
       }
   
       .detail-container {
@@ -277,13 +303,14 @@
         border-radius: 10px;
         margin-bottom: 40px;
         position: unset;
-  .picture-container {
+        
+      .picture-container {
         flex: 1;
         width: 100%;
         border-radius: 10px;
         overflow: hidden;
         position: unset;
-        height: auto; /* Allow it to expand with the container */
+        height: auto; 
 
         picture img,
         picture source {
@@ -333,7 +360,7 @@
           position: relative;
   
           .top-detail {
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
   
             .back {
@@ -352,8 +379,23 @@
               }
             }
   
+            .item-origin {
+              display: unset;
+              background-color: $yellow;
+              padding: 0.5rem 1rem;
+              border-radius: 15px;
+              min-width: 120px;
+              gap: 0.5rem;
+  
+              p {
+                font-size: 1.2rem;
+                font-weight: 600;
+              }
+            }
+  
             #like,
             #unlike {
+              margin-left: auto;
               width: 55px;
               height: 55px;
               display: flex;
@@ -431,6 +473,10 @@
         .dongeng-line {
           border-top: 3px solid $pink;
         }
+
+        .detail-origin{
+          display: none;
+        }
   
         .detail-desc {
           font-size: 19px;
@@ -471,3 +517,96 @@
     }
   }
   
+  .story-detail-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-top: 6rem;
+    animation: story-detail-skeleton 1.5s infinite linear;
+  
+    & > * {
+      background: linear-gradient(90deg, rgb(95, 95, 95), $black, rgb(95, 95, 95));
+      background-size: 400% 100%;
+      animation: item-gradient 2s infinite linear;
+    }
+ 
+    @keyframes item-gradient {
+          0% {
+              background-position: 100% 0;
+          }
+
+          100% {
+              background-position: -100% 0;
+          }
+    }
+  
+    .detail-skeleton-image {
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 0.5rem;
+  
+      @media (min-width: 590px) {
+      height: 300px;
+      }
+    }
+
+    .detail-skeleton-title{
+      height: 15px;
+      width: 40%;
+    }
+  
+    .detail-skeleton-text {
+      height: 15px;
+    }
+
+    .detail-skeleton-morals {
+      height: 150px;
+      border-radius: 10px;
+      }
+
+      @media (min-width: 870px) {
+        margin: 3rem 4rem;
+        margin-top: 10rem;
+        padding: 0;
+      
+        .detail-skeleton-image {
+          height: 19.2rem;
+          margin-bottom: 70px;
+        }
+
+        .detail-skeleton-title{
+          display: unset;
+          height: 32px;
+          width: 50%;
+          align-self: center; 
+        }
+      
+        .detail-skeleton-text {
+          height: 25px;
+        }
+    
+        .detail-skeleton-morals {
+          height: 14rem;
+          }
+        }
+
+      @media (min-width:1000px) {
+        margin: 3rem 6rem;
+        margin-top: 10rem;
+
+        .detail-skeleton-image {
+          height: 19.3rem;
+        }
+      }
+
+      @media (min-width:1200px) {
+        margin: 3rem 8rem;
+        margin-top: 10rem;
+
+        .detail-skeleton-image {
+          height: 17.5rem;
+        }
+      }
+    }
