@@ -2,36 +2,36 @@
   padding: 40px 20px;
   text-align: center;
   background-color: #f9f9f9;
-  margin-top: 100px;
+  margin-top: 150px;
 
   font-family: $quicksand;
   color: $black;
 
   h1 {
-    font-size: 24px; // Start with a smaller font size for mobile
+    font-size: 24px;
     margin: 10px 0;
   }
 
-  h1 .bold{
+  #bold{
     font-weight: 800;
-  }
+    font-family: $merienda;
+    }
 
   p {
-    font-size: 14px; // Start with a smaller font size for mobile
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 1.5rem;
     opacity: 90%;
-    max-width: 100%; // Full width on mobile
-    margin: 20px auto;
+    max-width: 100%;  margin: 20px auto;
   }
 
   h2 {
-    font-size: 20px; // Start with a smaller font size for mobile
+    font-size: 20px;
     margin: 40px 0 20px;
   }
 
   .developer-container {
     display: flex;
-    flex-direction: column; // Column layout for mobile
+    flex-direction: column; 
     align-items: center;
     gap: 20px;
     margin: 0 20px;
@@ -66,7 +66,7 @@
     }
 
     h3 {
-      font-size: 18px; // Start with a smaller font size for mobile
+      font-size: 18px;
       margin: 10px 0 5px;
       color: $black;
     }
@@ -107,7 +107,6 @@
           text-align: center;
           align-content: center;
           color: #333;
-          // background-color: black;
         }
       }
     }
@@ -119,16 +118,16 @@
     }
 
     p {
-      font-size: clamp(14px, 2vw, 18px);
+      font-size: 20px;
       max-width: 600px;
     }
 
     h2 {
-      font-size: clamp(20px, 3vw, 28px);
+      font-size: 1.5rem;
     }
 
     .developer-container {
-      flex-direction: row; // Switch to row layout for larger screens
+      flex-direction: row; 
       justify-content: center;
       max-width: 1200px;
       margin: 0px auto;
@@ -145,11 +144,26 @@
     }
 
     p {
-      max-width: 800px;
+      max-width: 900px;
+      font-size: 23px;
+      line-height: 2rem;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 35px;
+    }
+
+    .profile-box {
+      h3 {
+        font-size: 25px;
+        margin: 10px 0 5px;
+        color: $black;
+      }
+  
+      p {
+        font-size: 20px;
+        margin: 5px 0;
+      }
     }
   }
 }

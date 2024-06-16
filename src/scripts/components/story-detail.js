@@ -153,7 +153,7 @@ class StoryDetail extends HTMLElement {
 		} else if (category === "Legenda") {
 			span.classList.add("category-legend");
 			span.innerHTML = `
-                    <p><i class="far fa-flag"></i> ${this._storyDetails.category}</p>
+                    <p><i class="fa-solid fa-flag"></i> ${this._storyDetails.category}</p>
             `;
 		} else if (category === "Dongeng") {
 			span.classList.add("category-dongeng");
