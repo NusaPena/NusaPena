@@ -18,12 +18,16 @@ const FavoriteStoryIdb = {
   },
   async putStory(story) {
     if (!story.hasOwnProperty("id")) {
-			return;
-		}
+      return;
+    }
     return (await databasePromise).put(OBJECT_STORE_NAME, story);
   },
   async deleteStory(id) {
     return (await databasePromise).delete(OBJECT_STORE_NAME, id);
+  },
+  async searchStories(query) {
+    const stories = await this.getAllStory();
+    return stories.filter((story) => story.title.toLowerCase().includes(query.toLowerCase()));
   },
 };
 
