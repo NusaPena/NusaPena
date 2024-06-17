@@ -72,8 +72,13 @@ class StoryDetail extends HTMLElement {
                 <div class="detail-container">
                     <div class="picture-container">
                         <picture>
-                            <source media="(min-width: 1080px)" srcset="https://nusapena-api.vercel.app/images/large/${this._storyDetails.imageId}">
-                            <img src="https://nusapena-api.vercel.app/images/medium/${this._storyDetails.imageId}" alt="Cerita">
+                            <source media="(min-width: 1080px)" data-srcset="https://nusapena-api.vercel.app/images/large/${this._storyDetails.imageId}">
+                                <source media="(min-width: 600px)" data-srcset="https://nusapena-api.vercel.app/images/medium/${this._storyDetails.imageId}">
+                                <img
+                                    class="lazyload"
+                                    data-src="https://nusapena-api.vercel.app/images/small/${this._storyDetails.imageId}" 
+                                    alt="Cerita"
+                                />
                         </picture>
                     </div>
     
