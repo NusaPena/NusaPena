@@ -11,7 +11,7 @@ class AboutUs extends HTMLElement {
         this.innerHTML = `
             <section class="about">
                 <h1>Kenalan Yuk dengan</h1>
-                <h1 class="bold">Nusa Pena</h1>
+                <h1 id="bold">Nusa Pena</h1>
 
                 <p><b>NusaPena</b> adalah platform pembelajaran interaktif yang 
                     menawarkan pengalaman <b>membaca cerita rakyat Indonesia 

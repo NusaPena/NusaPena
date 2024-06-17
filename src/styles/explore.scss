@@ -22,13 +22,14 @@
                     flex-flow: row wrap;
                     justify-content: center;
                     align-items: center;
-                    gap: 1rem;
+                    gap: 2rem;
                     width: 100%;
                     color: $black;
 
                     h2 {
                          position: relative;
                          display: inline-block;
+                         align-self: flex-start;
                          font-size: 1.5rem;
 
                          &::before {
@@ -41,7 +42,7 @@
 
                               border-radius: 10px;
                               transform: translate(-50%, -50%);
-                              background-color: $green;
+                              background-color:#67ad67;
                               opacity: 30%;
 
                               z-index: -1;
@@ -56,18 +57,18 @@
                          }
 
                          @media screen and (min-width:1200px) {
-                              font-size: 3.5rem;
+                              font-size: 3rem;
                          }
                     }
 
                     form {
                          display: flex;
                          flex-flow: row nowrap;
-                         padding: 10px;
+                         padding: 10px 20px;
 
                          #search-input {
                               padding: 10px;
-                              border: 2px solid rgba(0, 0, 0, 0.5);
+                              border: 2px solid rgba(0, 0, 0, 0.3);
                               border-right: none;
                               border-top-left-radius: 7px;
                               border-bottom-left-radius: 7px;
@@ -78,12 +79,12 @@
 
                          #search-btn {
                               padding: 10px 20px;
-                              border: 2px solid rgba(0, 0, 0, 0.5);
+                              border: 2px solid rgba(0, 0, 0, 0.3);
                               border-top-right-radius: 7px;
                               border-bottom-right-radius: 7px;
 
                               font-size: 0.8rem;
-                              font-weight: 600;
+                              font-weight: 200;
                               background-color: $white;
 
                               cursor: pointer;
@@ -157,7 +158,7 @@
                          font-family: $quicksand;
 
                          &:hover {
-                              transition-duration: 0.5s;
+                              transition-duration: 0.1s;
                          }
 
                          @media screen and (min-width: 680px) {
@@ -179,9 +180,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $yellow;
+                              box-shadow: 0 0 10px 2px $yellow;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -190,9 +191,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $blue;
+                              box-shadow: 0 0 10px 2px $blue;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -201,9 +202,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $light-green;
+                              box-shadow: 0 0 10px 2px $light-green;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -212,9 +213,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $brown;
+                              box-shadow: 0 0 10px 2px $brown;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
 
@@ -223,9 +224,9 @@
 
                          &:hover,
                          &.selected {
-                              box-shadow: 0 0 20px 2px $pink;
+                              box-shadow: 0 0 10px 2px $pink;
                               font-weight: bolder;
-                              border: 2px $black solid;
+                              // border: 2px $black solid;
                          }
                     }
                }
@@ -296,7 +297,7 @@
                          overflow: hidden;
 
                          border: 2px rgba(0, 0, 0, 0.322) solid;
-                         border-radius: 10px;
+                         border-radius: 12px;
 
                          cursor: pointer;
 
