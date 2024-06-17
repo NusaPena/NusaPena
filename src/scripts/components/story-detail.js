@@ -32,6 +32,7 @@ class StoryDetail extends HTMLElement {
             <div class="story-detail-skeleton">
                 <div class="detail-skeleton-image"></div>
                 <div class="detail-skeleton-title"></div>
+                <div class="detail-skeleton-origin"></div>
                 <div class="detail-skeleton-text"></div>
                 <div class="detail-skeleton-text"></div>
                 <div class="detail-skeleton-text"></div>
@@ -73,15 +74,15 @@ class StoryDetail extends HTMLElement {
                     <div class="picture-container">
                         <picture>
                             <source media="(min-width: 1080px)" data-srcset="https://nusapena-api.vercel.app/images/large/${this._storyDetails.imageId}">
-                                <source media="(min-width: 600px)" data-srcset="https://nusapena-api.vercel.app/images/medium/${this._storyDetails.imageId}">
-                                <img
-                                    class="lazyload"
-                                    data-src="https://nusapena-api.vercel.app/images/small/${this._storyDetails.imageId}" 
-                                    alt="Cerita"
-                                />
+                            <source media="(min-width: 600px)" data-srcset="https://nusapena-api.vercel.app/images/medium/${this._storyDetails.imageId}">
+                            <img
+                                class="lazyload"
+                                data-src="https://nusapena-api.vercel.app/images/small/${this._storyDetails.imageId}" 
+                                alt="Cerita"
+                            />
                         </picture>
                     </div>
-    
+
                     <div class="detail-info">
                         <div class="top-detail">
                             <button class="back"><i class="fa-solid fa-arrow-left"></i></button>
@@ -93,17 +94,17 @@ class StoryDetail extends HTMLElement {
                         <p class="detail-synopsis">${this._storyDetails.synopsis}</p>
                     </div>
                 </div>
-        
+
                 <div class="detail-content">
-                    <h3 class="detail-title ">${this._storyDetails.title}</h3>
-                    <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
+                    <h3 class="detail-title">${this._storyDetails.title}</h3>
+                     <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
                     <p class="detail-origin">Asal : ${this._storyDetails.origin}</p>
                     <p class="detail-desc">${this._storyDetails.storyDesc}</p>
                 </div>
-    
+
                 <div class="detail-morals ${this._storyDetails.category.toLowerCase()}-border">
                     <h3 class="morals-title">Moral</h3>
-                    <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
+                    <span class="morals-line ${this._storyDetails.category.toLowerCase()}-line"></span>
                     <p class="morals-text">${this._storyDetails.morals}</p>
                 </div>
             </section>
@@ -118,7 +119,7 @@ class StoryDetail extends HTMLElement {
         if (this._favorite === "true") {
             likeButton.id = "unlike";
             likeButton.innerHTML = "<i class='fa-solid fa-heart'></i>";
-            likeButton.setAttribute("aria-label", "Simpan ke Favorit");
+            likeButton.setAttribute("aria-label", "Hapus dari Favorit");
         } else {
             likeButton.id = "like";
             likeButton.innerHTML = "<i class='fa-regular fa-heart'></i>";
