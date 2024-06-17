@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     // background-image: url("../public/images/heros/hero-right.png");
-    background-color: #80A681;
+    background-color: $light-green;
 
     .test-container {
         width: 90%;
@@ -15,7 +15,7 @@
         margin: 150px auto 0 auto;
         justify-content: center;
         align-items: center;
-        background-color: white;
+        background-color: $white;
         border-radius: 10px;
         max-width: 1000px;
         
@@ -53,15 +53,15 @@
 
                     &:hover {
                         color: $white;
-                        background-color: darken(#4eb5ff, 10%);
+                        background-color: lighten($blue, 10%);
                     }
 
                 }
             }
 
             .next {
-                background-color: #F8CE6A;
-                color: #fff;
+                background-color: $yellow;
+                color: $white;
                 border: none;
                 padding: 15px 20px;
                 border-radius: 10px;
@@ -79,7 +79,7 @@
                 }
 
                 &:disabled {
-                    background-color: lighten(#F8CE6A, 20%);
+                    background-color: lighten($yellow, 20%);
                     cursor: not-allowed;
                 }
             }
@@ -93,7 +93,7 @@
             font-size: 25px;
 
             .highlight {
-                background-color: #F8CE6A;
+                background-color: $yellow;
                 padding: 10px;
                 text-align: center;
                 border-radius: 10px;

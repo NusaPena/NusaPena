@@ -1,5 +1,5 @@
 .personality-box {
-    background-color: #FAE7B2;
+    background-color: lighten($yellow, 15%);
     justify-content: center;
     align-items: center;
     padding: 24px 10px;
@@ -30,12 +30,12 @@
             align-items: center;
 
             a {
-                color: white;
+                color: $white;
                 font-family: $quicksand;
                 font-weight: 300;
                 font-size: 12px;
                 border-radius: 10px;
-                background-color: #80A681;
+                background-color: $green;
                 padding: 15px 20px;
                 min-width: 44px;
                 min-height: 44px;

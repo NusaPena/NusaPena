@@ -6,10 +6,10 @@ const Main = {
         return `
             <hero-section></hero-section>
             <genre-section></genre-section>
-            <section class="explore-section">
-                <h2>Mau Baca Apa Hari Ini?</h2>
+            <section class="explore-section" id="explore-section">
+                <h2 class="main-text">Mau Baca Apa Hari Ini?</h2>
                 <story-list></story-list>
-                <a class="main-button" href="#/explore">Lihat Semua ➡️</a>
+                <a class="main-button" href="#/explore">Lihat Semua <i class="fa-solid fa-arrow-right"></i></a>
             </section>
         `;
     },
