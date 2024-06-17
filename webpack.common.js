@@ -42,6 +42,27 @@ module.exports = {
 			swDest: "./sw.bundle.js",
 			runtimeCaching: [
 				{
+					urlPattern: ({ url }) => url.href.startsWith("https://nusapena-api.vercel.app/list"),
+					handler: "StaleWhileRevalidate",
+					options: {
+						cacheName: "stories-list-nusapena-api",
+					},
+				},
+				{
+					urlPattern: ({ url }) => url.href.startsWith("https://nusapena-api.vercel.app/details"),
+					handler: "StaleWhileRevalidate",
+					options: {
+						cacheName: "story-details-nusapena-api",
+					},
+				},
+				{
+					urlPattern: ({ url }) => url.href.startsWith("https://nusapena-api.vercel.app/images/"),
+					handler: "StaleWhileRevalidate",
+					options: {
+						cacheName: "story-images-nusapena-api",
+					},
+				},
+				{
 					urlPattern: /^https:\/\/fonts\.gstatic\.com/,
 					handler: "CacheFirst",
 					options: {

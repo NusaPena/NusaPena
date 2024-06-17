@@ -20,9 +20,9 @@ class Storyitem extends HTMLElement {
                     <div class="image-container">
 					<span class="item-origin origin-top"><p>${this._storyItem.origin}</p></span>
                          <picture>
-                              <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/medium/${this._storyItem.imageId}">
+                              <source media="(min-width: 1080px)" srcset="https://nusapena-api.vercel.app/images/medium/${this._storyItem.imageId}">
                               <img
-                                   src="http://localhost:5000/images/small/${this._storyItem.imageId}"
+                                   src="https://nusapena-api.vercel.app/images/small/${this._storyItem.imageId}"
                                    alt="Cerita ${this._storyItem.title}"
                               />
                          </picture>
