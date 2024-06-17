@@ -18,7 +18,7 @@ footer-bar {
       margin: 10px;
       border-right: 1px solid $white;
 
-      h3 {
+      h2 {
         font-size: 19px;
         font-family: $merienda;
       }
@@ -54,16 +54,16 @@ footer-bar {
   @media screen and (min-width: 375px) {
     .footer-top {
         .footer-title{
-          h3{
+          h2 {
             font-size: 20px;
           }
-          p{
+          p {
             font-size: 11px;
           }
         }
 
         .footer-members{
-          p{
+          p {
             font-size: 10px;
           }
         }
@@ -73,23 +73,23 @@ footer-bar {
   @media screen and (min-width: 500px) {
     .footer-top {
       .footer-title{
-        h3{
+        h2 {
           font-size: 30px;
         }
-        p{
+        p {
           font-size: 13px;
         }
       }
 
       .footer-members{
-        p{
+        p {
           font-size: 11px;
         }
       }
     }
     
     .footer-bottom{
-      p{
+      p {
         font-size: 11px;
       }
     }
@@ -101,24 +101,24 @@ footer-bar {
       .footer-title{
         width: 55%;
         margin-left: 5%;
-        h3{
+        h2 {
           font-size: 34px;
         }
-        p{
+        p {
           font-size: 16px;
         }
       }
 
       .footer-members{
         margin-right: 5%;
-        p{
+        p {
           font-size: 16px;
         }
       }
     }
     
     .footer-bottom{
-      p{
+      p {
         font-size: 16px;
       }
     }
@@ -130,10 +130,10 @@ footer-bar {
       .footer-title{
         width: 52%;
         margin-left: 10%;
-        h3{
+        h2 {
           font-size: 36px;
         }
-        p{
+        p {
           font-size: 20px;
         }
       }
@@ -141,14 +141,14 @@ footer-bar {
       .footer-members{
         margin-right: 10%;
         padding-left: 2%;
-        p{
+        p {
           font-size: 20px;
         }
       }
     }
     
     .footer-bottom{
-      p{
+      p {
         font-size: 20px;
       }
     }
@@ -159,24 +159,24 @@ footer-bar {
       margin-bottom: 40px;
       .footer-title{
         width: 50%;
-        h3{
+        h2 {
           font-size: 38px;
         }
-        p{
+        p {
           font-size: 22px;
         }
       }
 
       .footer-members{
         padding-left: 4%;
-        p{
+        p {
           font-size: 22px;
         }
       }
     }
     
     .footer-bottom{
-      p{
+      p {
         font-size: 22px;
       }
     }
@@ -187,24 +187,24 @@ footer-bar {
       margin-bottom: 40px;
       .footer-title{
         width: 50%;
-        h3{
+        h2 {
           font-size: 45px;
         }
-        p{
+        p {
           font-size: 28px;
         }
       }
 
       .footer-members{
         
-        p{
+        p {
           font-size: 28px;
         }
       }
     }
     
     .footer-bottom{
-      p{
+      p {
         font-size: 28px;
       }
     }
@@ -216,10 +216,10 @@ footer-bar {
       .footer-title{
         width: 38%;
         padding-right: 5%;
-        h3{
+        h2 {
           font-size: 45px;
         }
-        p{
+        p {
           font-size: 30px;
         }
       }
@@ -227,14 +227,14 @@ footer-bar {
       .footer-members{
         width: 40%;
         padding-left: 5%;
-        p{
+        p {
           font-size: 30px;
         }
       }
     }
     
     .footer-bottom{
-      p{
+      p {
         font-size: 30px;
       }
     }

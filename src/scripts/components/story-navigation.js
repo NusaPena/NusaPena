@@ -31,9 +31,15 @@ class StoryNavigation extends HTMLElement {
     });
 
     const searchInput = this.querySelector("#search-input");
+    const searchIcon = this.querySelector('.search-icon');
     if (searchInput) {
       searchInput.addEventListener("input", () => {
         const searchQuery = searchInput.value.trim();
+        if (searchQuery !== "") {
+          searchIcon.classList.add('hidden');
+        } else {
+          searchIcon.classList.remove('hidden');
+        }
         const searchEvent = new CustomEvent("searchStories", {
           detail: { query: searchQuery },
         });
@@ -46,16 +52,18 @@ class StoryNavigation extends HTMLElement {
     this.innerHTML = `
       <div class="story-nav-container">
         <div class="head-container">
-          <h2>Mau Baca Apa Hari Ini?</h2>
+          <h2 class="main-text">Mau Baca Apa Hari Ini?</h2>
           <form>
-            <input 
-              type="text" 
-              id="search-input" 
-              name="search_input" 
-              autocomplete="off"
-              placeholder="Cari cerita rakyat..."
-            />
-            <button type="button" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>     
+            <div class="search-container">
+              <input 
+                type="text" 
+                id="search-input" 
+                name="search_input" 
+                autocomplete="off"
+                placeholder="Cari cerita rakyat..."
+                />
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div> 
           </form>
         </div>
         <div class="category-btn-container">

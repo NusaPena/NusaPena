@@ -191,7 +191,8 @@ navigation-bar {
   font-size: 30px;
   line-height: 40px; 
   font-family: $quicksand;
-  &:focus {
+  &:focus,
+  &:focus-visible {
     left: 0;
     top: 20px;
     outline: 3px solid $yellow;

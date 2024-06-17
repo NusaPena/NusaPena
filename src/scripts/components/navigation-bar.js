@@ -10,7 +10,7 @@ class NavigationBar extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="nav-title">
-        <a href="#explore" id="skip-link" class="skip-link" aria-label="Jelajahi Cerita">Jelajahi</a>
+        <a href="#/explore" id="skip-link" class="skip-link" aria-label="Jelajahi Cerita">Jelajahi</a>
         <h2>NusaPena</h2>
       </div>
 

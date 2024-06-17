@@ -27,9 +27,20 @@ class AboutUs extends HTMLElement {
                         <p>UI/UX Designer</p>
                         <p>Front-End Developer</p>
                         <div class="contact">
-                            <a href="https://github.com/NiaPutri23" class="icon"><i class="fa-brands fa-github"></i></a>
-                            <a href="mailto:illiniamalika23@gmail.com"class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                            <a href="https://www.linkedin.com/in/illinia" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/NiaPutri23" 
+                                class="icon" aria-label="GitHub" 
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="mailto:illiniamalika23@gmail.com"
+                                class="icon" aria-label="Email">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/illinia" 
+                                class="icon" aria-label="LinkedIn" 
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="profile-box">
@@ -38,9 +49,20 @@ class AboutUs extends HTMLElement {
                         <p>Front-End Developer</p>
                         <p>Back-End Developer</p>
                         <div class="contact">
-                            <a href="https://github.com/Rfiraf" class="icon"><i class="fa-brands fa-github"></i></a>
-                            <a href="mailto:rafisarosa56@gmail.com"class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                            <a href="https://www.linkedin.com/in/muhammad-rafi-aria-sarosa/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Rfiraf" 
+                                class="icon" aria-label="GitHub" 
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="mailto:rafisarosa56@gmail.com"
+                                class="icon" aria-label="Email">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammad-
+                                rafi-aria-sarosa/" class="icon" ari
+                                a-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="profile-box">
@@ -49,9 +71,20 @@ class AboutUs extends HTMLElement {
                         <p>Front-End Developer</p>
                         <p>Back-End Developer</p>
                         <div class="contact">
-                            <a href="https://github.com/IlhamAlifioD" class="icon"><i class="fa-brands fa-github"></i></a>
-                            <a href="mailto:alifiowijaya1424@gmail.com"class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                            <a href="https://www.linkedin.com/in/ilham-alifio-daruwijaya/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/IlhamAlifioD" 
+                                class="icon" aria-label="GitHub" 
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="mailto:alifiowijaya1424@gmail.com" 
+                                class="icon" aria-label="Email">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ilham-ali
+                                fio-daruwijaya/" class="icon" aria-
+                                label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
