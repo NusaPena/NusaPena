@@ -17,22 +17,22 @@ class GenreSection extends HTMLElement {
             <div class="genre-list">
                 <div class="genre-item" data-genre="fabel" tabindex="0">
                     <h3>FABEL</h3>
-                    <img src="./images/fabel.png" alt="Fabel">
+                    <img class="lazyload" data-src="./images/genre-pict/fabel.png" alt="Fabel">
                 </div>
   
                 <div class="genre-item" data-genre="sage" tabindex="0">
                     <h3>SAGE</h3>
-                    <img src="./images/sage.png" alt="Sage">
+                    <img class="lazyload" data-src="./images/genre-pict/sage.png" alt="Sage">
                 </div>
   
                 <div class="genre-item" data-genre="legenda" tabindex="0">
                     <h3>LEGENDA</h3>
-                    <img src="./images/legenda.png" alt="Legenda">
+                    <img class="lazyload" data-src="./images/genre-pict/legenda.png" alt="Legenda">
                 </div>
   
                 <div class="genre-item" data-genre="dongeng" tabindex="0">
                     <h3>DONGENG</h3>
-                    <img src="./images/dongeng.png" alt="Dongeng">
+                    <img class="lazyload" data-src="./images/genre-pict/dongeng.png" alt="Dongeng">
                 </div>
             </div>
             
