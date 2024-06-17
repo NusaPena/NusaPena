@@ -117,6 +117,13 @@ module.exports = {
 					},
 				},
 				{
+					urlPattern: /^https:\/\/fonts\.googleapis\.com/,
+					handler: "StaleWhileRevalidate",
+					options: {
+						cacheName: "google-font-source",
+					},
+				},
+				{
 					urlPattern: ({ url }) => url.href.startsWith("https://kit.fontawesome.com/c9838309fd.js"),
 					handler: "StaleWhileRevalidate",
 					options: {
