@@ -29,19 +29,19 @@ class StoryDetail extends HTMLElement {
 
     isLoading() {
         this.innerHTML = `
-        <div class="story-detail-skeleton">
-          <div class="detail-skeleton-image"></div>
-          <div class="detail-skeleton-title"></div>
-          <div class="detail-skeleton-text"></div>
-          <div class="detail-skeleton-text"></div>
-          <div class="detail-skeleton-text"></div>
-          <div class="detail-skeleton-text"></div>
-          <div class="detail-skeleton-text"></div>
-          <div class="detail-skeleton-text"></div>
-          <div class="detail-skeleton-morals"></div>
-        </div>
-      `;
-   }
+            <div class="story-detail-skeleton">
+                <div class="detail-skeleton-image"></div>
+                <div class="detail-skeleton-title"></div>
+                <div class="detail-skeleton-text"></div>
+                <div class="detail-skeleton-text"></div>
+                <div class="detail-skeleton-text"></div>
+                <div class="detail-skeleton-text"></div>
+                <div class="detail-skeleton-text"></div>
+                <div class="detail-skeleton-text"></div>
+                <div class="detail-skeleton-morals"></div>
+            </div>
+        `;
+    }
 
 	getStoryDetails() {
 		return this._storyDetails;
@@ -72,8 +72,13 @@ class StoryDetail extends HTMLElement {
                 <div class="detail-container">
                     <div class="picture-container">
                         <picture>
-                        <source media="(min-width: 1080px)" srcset="http://localhost:5000/images/large/${this._storyDetails.imageId}">
-                        <img src="http://localhost:5000/images/medium/${this._storyDetails.imageId}" alt="cerita">
+                            <source media="(min-width: 1080px)" data-srcset="https://nusapena-api.vercel.app/images/large/${this._storyDetails.imageId}">
+                                <source media="(min-width: 600px)" data-srcset="https://nusapena-api.vercel.app/images/medium/${this._storyDetails.imageId}">
+                                <img
+                                    class="lazyload"
+                                    data-src="https://nusapena-api.vercel.app/images/small/${this._storyDetails.imageId}" 
+                                    alt="Cerita"
+                                />
                         </picture>
                     </div>
     

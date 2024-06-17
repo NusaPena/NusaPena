@@ -1,9 +1,9 @@
 const CONFIG = {
-	BASE_URL: "http://localhost:5000",
-	BASE_IMAGE_URL: "http://localhost:5000/images/",
+	BASE_URL: "https://nusapena-api.vercel.app",
+	BASE_IMAGE_URL: "https://nusapena-api.vercel.app/images/",
 	DEFAULT_LANGUAGE: "en-us",
-	CACHE_NAME: "nusa-pena",
-	DATABASE_NAME: "nusa-pena-database",
+	CACHE_NAME: "nusapena",
+	DATABASE_NAME: "nusapena-database",
 	DATABASE_VERSION: 1,
 	OBJECT_STORE_NAME: "stories",
 };

@@ -11,7 +11,7 @@ class FooterBar extends HTMLElement {
     this.innerHTML = `
     <div class="footer-top">
       <div class="footer-title">
-        <h3>NusaPena<h3>
+        <h2>NusaPena<h2>
         <p>Menyelami Warisan Budaya,</p>
         <p>Menginspirasi Generasi Masa Depan</p>
       </div>

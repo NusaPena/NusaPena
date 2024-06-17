@@ -2,10 +2,43 @@
      @include content-container;
      display: flex;
      flex-direction: column;
-     align-items: center;
-     text-align: center;
      max-width: 1450px;
      margin: 0 auto;
+
+     .main-text {
+          position: relative;
+          display: inline-block;
+          align-self: center;
+          font-size: 1.5rem;
+
+          &::before {
+               content: "";
+               position: absolute;
+               width: 80%;
+               height: 50%;
+               left: 50%;
+               top: 85%;
+
+               border-radius: 10px;
+               transform: translate(-50%, -50%);
+               background-color: $light-green;
+               opacity: 30%;
+
+               z-index: -1;
+          }
+
+          @media screen and (min-width: 768px) {
+               font-size: 2.4rem;
+          }
+
+          @media screen and (min-width: 992px) {
+               font-size: 2.5rem;
+          }
+
+          @media screen and (min-width:1200px) {
+               font-size: 3rem;
+          }
+     }
 
      story-navigation {
           margin-top: 6rem;
@@ -26,39 +59,8 @@
                     width: 100%;
                     color: $black;
 
-                    h2 {
-                         position: relative;
-                         display: inline-block;
+                    .main-text {
                          align-self: flex-start;
-                         font-size: 1.5rem;
-
-                         &::before {
-                              content: "";
-                              position: absolute;
-                              width: 80%;
-                              height: 50%;
-                              left: 50%;
-                              top: 85%;
-
-                              border-radius: 10px;
-                              transform: translate(-50%, -50%);
-                              background-color:#67ad67;
-                              opacity: 30%;
-
-                              z-index: -1;
-                         }
-
-                         @media screen and (min-width: 768px) {
-                              font-size: 2.4rem;
-                         }
-
-                         @media screen and (min-width: 992px) {
-                              font-size: 2.5rem;
-                         }
-
-                         @media screen and (min-width:1200px) {
-                              font-size: 3rem;
-                         }
                     }
 
                     form {
@@ -66,51 +68,44 @@
                          flex-flow: row nowrap;
                          padding: 10px 20px;
 
-                         #search-input {
-                              padding: 10px;
-                              border: 2px solid rgba(0, 0, 0, 0.3);
-                              border-right: none;
-                              border-top-left-radius: 7px;
-                              border-bottom-left-radius: 7px;
+                         .search-container {
+                              position: relative;
+                              display: flex;
+                              align-items: center;
+                              width: 100%;
 
-                              font-size: 0.8rem;
-                              font-weight: 600;
-                         }
+                              #search-input {
+                                   width: 100%;
+                                   padding: 10px 35px 10px 10px;
+                                   border: 2px solid rgba(0, 0, 0, 0.3);
+                                   border-radius: 7px;
 
-                         #search-btn {
-                              padding: 10px 20px;
-                              border: 2px solid rgba(0, 0, 0, 0.3);
-                              border-top-right-radius: 7px;
-                              border-bottom-right-radius: 7px;
+                                   font-size: 0.8rem;
+                                   font-weight: 600;
 
-                              font-size: 0.8rem;
-                              font-weight: 200;
-                              background-color: $white;
+                                   @media screen and (min-width: 768px) {
+                                        font-size: 1rem;
+                                   }
 
-                              cursor: pointer;
-                         }
-
-                         @media screen and (min-width: 768px) {
-
-                              #search-input,
-                              #search-btn {
-                                   font-size: 1rem;
-                              }
-
-                              @media screen and (min-width: 992px) {
-
-                                   #search-input,
-                                   #search-btn {
+                                   @media screen and (min-width: 992px) {
                                         font-size: 1.2rem;
                                    }
 
                                    @media screen and (min-width: 1200px) {
-
-                                        #search-input,
-                                        #search-btn {
-                                             font-size: 1.4rem;
-                                        }
+                                        font-size: 1.4rem;
                                    }
+                              }
+
+                              .search-icon {
+                                   position: absolute;
+                                   right: 20px;
+                                   top: 15px;
+                                   color: #999;
+                                   transition: opacity 0.3s ease;
+                              }
+
+                              .hidden {
+                                   opacity: 0;
                               }
                          }
                     }
@@ -285,7 +280,7 @@
 
                // ? Wide Screen
                @media screen and (min-width: 2000px) {
-                    grid-template-columns: repeat(2, minmax(50%, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
                }
 
                story-item {
@@ -529,7 +524,7 @@
 
                // ? Wide Screen
                @media screen and (min-width: 2000px) {
-                    grid-template-columns: repeat(2, minmax(50%, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
                }
 
 
