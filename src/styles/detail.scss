@@ -6,7 +6,8 @@
       overflow: hidden;
       position: relative;
       border: 2px #00000052 solid;
-      border-radius: 10px;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
   
       .picture-container {
         flex: 2;
@@ -80,7 +81,6 @@
           }
   
           .category-information {
-            // flex-grow: 1; 
             text-align: center;
             padding: 0.5rem;
             border-radius: 15px;
@@ -144,23 +144,24 @@
         }
   
         .detail-title {
-          width: 100%;
-          font-size: 22px;
-          color: white;
-          text-align: center;
-          position: absolute;
-          bottom: 8px;
-          left: 50%;
-          transform: translate(-50%, -50%);
+          display: none;
+          // width: 100%;
+          // font-size: 22px;
+          // color: white;
+          // text-align: center;
+          // position: absolute;
+          // bottom: 8px;
+          // left: 50%;
+          // transform: translate(-50%, -50%);
   
-          @media screen and (min-width: 590px) {
-            font-size: 1.7rem;
-            bottom: 15px;
-          }
+          // @media screen and (min-width: 590px) {
+          //   font-size: 1.7rem;
+          //   bottom: 15px;
+          // }
 
-          @media screen and (min-width: 700px) {
-            font-size: 28px;
-          }
+          // @media screen and (min-width: 700px) {
+          //   font-size: 28px;
+          // }
         }
   
         .detail-synopsis {
@@ -176,11 +177,44 @@
       text-align: center;
   
       .detail-title {
-        display: none;
+          display: unset;
+          width: 100%;
+          font-size: 22px;
+          color: rgb(0, 0, 0);
+
+          @media screen and (min-width: 590px) {
+            font-size: 1.7rem;
+          }
+
+          @media screen and (min-width: 700px) {
+            font-size: 30px;
+          }
       }
   
       .line {
-        display: none;
+        display: block;
+        border-top: 3px solid #db920b;
+        margin-top: 5px;
+        margin-bottom: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+      }
+  
+      .fabel-line {
+        border-top: 3px solid $blue;
+      }
+  
+      .sage-line {
+        border-top: 3px solid $light-green;
+      }
+  
+      .legenda-line {
+        border-top: 3px solid $brown;
+      }
+  
+      .dongeng-line {
+        border-top: 3px solid $pink;
       }
 
       .detail-origin{
@@ -191,6 +225,7 @@
 
         @media screen and (min-width: 590px) {
           font-size: 16px;
+          margin-bottom: 15px;
         }
 
         @media screen and (min-width: 700px) {
@@ -248,18 +283,18 @@
         }
 
         @media screen and (min-width: 700px) {
-            font-size: 28px;
+            font-size: 30px;
         }
       }
   
-      .line {
+      .morals-line {
         display: block;
         border-top: 3px solid #db920b;
         margin-top: 10px;
         margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
-        width: 60%;
+        width: 40%;
       }
   
       .fabel-line {
@@ -579,13 +614,17 @@
             font-size: 2rem;
         }
   
-        .line {
+        .morals-line {
           display: block;
           margin-top: 10px;
           margin-bottom: 20px;
           margin-left: auto;
           margin-right: auto;
           width: 60%;
+
+          @media screen and (min-width: 1000px){
+            width: 40%;
+          }
         }
   
         .morals-text {
@@ -653,6 +692,13 @@
     }
 
     .detail-skeleton-title{
+      height: 25px;
+      width: 40%;
+      width: 50%;
+      align-self: center; 
+    }
+
+    .detail-skeleton-origin{
       height: 15px;
       width: 40%;
     }
@@ -674,6 +720,10 @@
         .detail-skeleton-image {
           height: 19.2rem;
           margin-bottom: 70px;
+        }
+
+        .detail-skeleton-origin{
+          display: none;
         }
 
         .detail-skeleton-title{
