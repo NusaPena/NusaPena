@@ -1,30 +1,44 @@
 {
-	"id": "",
+	"name": "NusaPena",
+	"short_name": "NusaPena",
+	"description": "Aplikasi PWA NusaPena",
 	"start_url": "./index.html",
-	"name": "",
-	"short_name": "",
-	"description": "",
 	"display": "standalone",
 	"background_color": "#ededed",
 	"theme_color": "#ededed",
 	"icons": [
-		{
-			"src": "images/icons/",
-			"sizes": "32x32",
-			"type": "image/png",
-			"purpose": "any"
-		},
-		{
-			"src": "images/icons/",
-			"sizes": "192x192",
-			"type": "image/png",
-			"purpose": "maskable"
-		},
-		{
-			"src": "images/icons/",
-			"sizes": "512x512",
-			"type": "image/png",
-			"purpose": "any"
-		}
+	  {
+		"src": "images/icons/icon-x32.png",
+		"sizes": "32x32",
+		"type": "image/png",
+		"purpose": "any"
+	  },
+	  {
+		"src": "images/icons/icon-x192.png",
+		"sizes": "192x192",
+		"type": "image/png",
+		"purpose": "maskable"
+	  },
+	  {
+		"src": "images/icons/icon-x512.png",
+		"sizes": "512x512",
+		"type": "image/png",
+		"purpose": "any"
+	  }
+	],
+	"screenshots": [
+	  {
+		"src": "images/screenshots/screenshot0.png",
+		"sizes": "1502x819",
+		"type": "image/png",
+		"form_factor": "wide"
+	  },
+	  {
+		"src": "images/screenshots/screenshot1.png",
+		"sizes": "640x464",
+		"type": "image/png",
+		"form_factor": "narrow"
+	  }
 	]
 }
+  
