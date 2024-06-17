@@ -1,16 +1,20 @@
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
+
 import "regenerator-runtime"; /* for async await transpile */
+import "../styles/main.scss";
+import "./data/personality-questions";
+
 import "./components/navigation-bar";
 import "./components/hero-section";
 import "./components/genre-section";
-import "./components/footer-bar";
-import "../styles/main.scss";
 import "./components/story-navigation";
 import "./components/story-list";
 import "./components/story-item";
 import "./components/story-detail";
+import "./components/about-us";
 import "./components/personality-box";
-import "./data/personality-questions";
-
+import "./components/footer-bar";
 
 import App from "./views/app";
 import swRegister from "./utils/sw-register";
