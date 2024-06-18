@@ -1,7 +1,7 @@
 .personality-test {
     margin: 0;
     padding: 0;
-    height: fit-content;
+    height: 115svh;
     min-height: 100svh;
     display: flex;
     justify-content: center;
@@ -9,11 +9,15 @@
     // background-image: url("../public/images/heros/hero-right.png");
     background-color: $light-green;
 
+    @media screen and (min-width: 480px) {
+        height: fit-content;
+    }
+
     .test-container {
         width: 90%;
         min-height: 200px;
         padding: 20px;
-        margin: 350px auto 0 auto;
+        margin: 120px auto 50px auto;
         justify-content: center;
         align-items: center;
         background-color: $white;
@@ -46,15 +50,17 @@
 
             .options {
                 margin: 0 auto;
+                height: fit-content;
 
                 .option {
                     display: flex;
                     margin: 16px 0;
                     padding: 10px;
+                    min-height: fit-content;
                     align-items: center;
                     border: 2px solid rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
-                    font-size: 1.2em;
+                    font-size: 0.75rem;
 
                     cursor: pointer;
 
@@ -69,7 +75,9 @@
                         background-color: lighten($light-green, 10%);
                         font-weight: 800;
                     }
-
+                    @media screen and (min-width:480px) {
+                        font-size: 1.2em;
+                    }
                 }
             }
 
@@ -90,7 +98,9 @@
                 margin-top: 20px;
                 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 
-                &:hover {
+                &:hover,
+                &:focus,
+                &:focus-visible {
                     box-shadow: #1e1e1e;
                     background-color: $dark-yellow;
                 }
@@ -107,7 +117,6 @@
             text-align: center;
             margin: 0 auto;
             padding: 20px;
-            font-size: 25px;
             display: flex;
 
             .highlight {
@@ -115,13 +124,14 @@
                 padding: 10px;
                 text-align: center;
                 border-radius: 10px;
-                font-size: 30px;
+                font-size: 1rem;
                 max-width: 500px;
                 margin: 0 auto;
             }
 
             .desc {
                 margin-top: 20px;
+                font-size: 0.75rem;
             }
 
             .main-button {
@@ -140,17 +150,36 @@
                 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 
                 &:hover{
-                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-                     cursor: pointer;
-                     scale: (1.03);
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    scale: (1.03);
                 }
-      
+
                 @media screen and (min-width: 920px) {
-                     font-weight: 600;
-                     font-size: 25px;
-                     padding: 20px 30px;
+                    font-weight: 600;
+                    font-size: 25px;
+                    padding: 20px 30px;
                 }
-           }
+            }
+
+            @media screen and (min-width: 480px) {
+                .highlight {
+                    font-size: 1.5rem;
+                }
+                .desc,
+                p {
+                    font-size: 1rem;
+                }
+            }
+            @media screen and (min-width: 768px) {
+                .highlight {
+                    font-size: 2rem;
+                }
+                .desc,
+                p {
+                    font-size: 1.5rem;
+                }
+            }
         }
 
         @media screen and (min-width: 600px) {
