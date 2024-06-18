@@ -16,7 +16,7 @@ class Storyitem extends HTMLElement {
 
 	render() {
 		this.innerHTML = `
-               <div class="item-container">
+               <div class="item-container" data-aos="fade-up" data-aos-duration="1000">
                     <div class="image-container">
 					<span class="item-origin origin-top"><p>${this._storyItem.origin}</p></span>
                          <picture>
