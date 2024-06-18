@@ -8,10 +8,10 @@ const questions = [
             d: "Menunggu hingga ada solusi yang lebih mudah"
         },
         characterPoints: {
-            a: { si_kancil: 4, cindelaras: 3, bawang_putih: 2, putri_keong_mas: 1, timun_emas: 2, si_kura_kura: 1, si_belalang: 3 },
-            b: { si_kancil: 3, cindelaras: 4, bawang_putih: 2, putri_keong_mas: 1, timun_emas: 3, si_kura_kura: 2, si_belalang: 4 },
-            c: { si_kancil: 2, cindelaras: 1, bawang_putih: 3, putri_keong_mas: 4, timun_emas: 1, si_kura_kura: 3, si_belalang: 2 },
-            d: { si_kancil: 1, cindelaras: 2, bawang_putih: 4, putri_keong_mas: 3, timun_emas: 4, si_kura_kura: 4, si_belalang: 1 }
+            a: { Si_kancil: 4, Cindelaras: 3, Bawang_Putih: 2, Candra_Kirana: 1, Timun_Emas: 2, Si_Kura_Kura: 1, Si_Belalang: 3 },
+            b: { Si_kancil: 3, Cindelaras: 4, Bawang_Putih: 2, Candra_Kirana: 1, Timun_Emas: 3, Si_Kura_Kura: 2, Si_Belalang: 4 },
+            c: { Si_kancil: 2, Cindelaras: 1, Bawang_Putih: 3, Candra_Kirana: 4, Timun_Emas: 1, Si_Kura_Kura: 3, Si_Belalang: 2 },
+            d: { Si_kancil: 1, Cindelaras: 2, Bawang_Putih: 4, Candra_Kirana: 3, Timun_Emas: 4, Si_Kura_Kura: 4, Si_Belalang: 1 }
         }
     },
     {
@@ -23,10 +23,10 @@ const questions = [
             d: "Menghindari masalah sebaik mungkin"
         },
         characterPoints: {
-            a: { si_kancil: 3, cindelaras: 2, bawang_putih: 4, putri_keong_mas: 3, timun_emas: 2, si_kura_kura: 4, si_belalang: 1 },
-            b: { si_kancil: 2, cindelaras: 3, bawang_putih: 3, putri_keong_mas: 4, timun_emas: 3, si_kura_kura: 2, si_belalang: 4 },
-            c: { si_kancil: 4, cindelaras: 1, bawang_putih: 2, putri_keong_mas: 2, timun_emas: 4, si_kura_kura: 3, si_belalang: 2 },
-            d: { si_kancil: 1, cindelaras: 4, bawang_putih: 1, putri_keong_mas: 1, timun_emas: 1, si_kura_kura: 1, si_belalang: 3 }
+            a: { Si_kancil: 3, Cindelaras: 2, Bawang_Putih: 4, Candra_Kirana: 3, Timun_Emas: 2, Si_Kura_Kura: 4, Si_Belalang: 1 },
+            b: { Si_kancil: 2, Cindelaras: 3, Bawang_Putih: 3, Candra_Kirana: 4, Timun_Emas: 3, Si_Kura_Kura: 2, Si_Belalang: 4 },
+            c: { Si_kancil: 4, Cindelaras: 1, Bawang_Putih: 2, Candra_Kirana: 2, Timun_Emas: 4, Si_Kura_Kura: 3, Si_Belalang: 2 },
+            d: { Si_kancil: 1, Cindelaras: 4, Bawang_Putih: 1, Candra_Kirana: 1, Timun_Emas: 1, Si_Kura_Kura: 1, Si_Belalang: 3 }
         }
     },
     {
@@ -38,10 +38,10 @@ const questions = [
             d: "Menyerah jika terlalu sulit"
         },
         characterPoints: {
-            a: { si_kancil: 3, cindelaras: 4, bawang_putih: 3, putri_keong_mas: 2, timun_emas: 4, si_kura_kura: 2, si_belalang: 3 },
-            b: { si_kancil: 2, cindelaras: 3, bawang_putih: 2, putri_keong_mas: 4, timun_emas: 3, si_kura_kura: 3, si_belalang: 4 },
-            c: { si_kancil: 4, cindelaras: 2, bawang_putih: 4, putri_keong_mas: 3, timun_emas: 2, si_kura_kura: 1, si_belalang: 1 },
-            d: { si_kancil: 1, cindelaras: 1, bawang_putih: 1, putri_keong_mas: 1, timun_emas: 1, si_kura_kura: 4, si_belalang: 2 }
+            a: { Si_kancil: 3, Cindelaras: 4, Bawang_Putih: 3, Candra_Kirana: 2, Timun_Emas: 4, Si_Kura_Kura: 2, Si_Belalang: 3 },
+            b: { Si_kancil: 2, Cindelaras: 3, Bawang_Putih: 2, Candra_Kirana: 4, Timun_Emas: 3, Si_Kura_Kura: 3, Si_Belalang: 4 },
+            c: { Si_kancil: 4, Cindelaras: 2, Bawang_Putih: 4, Candra_Kirana: 3, Timun_Emas: 2, Si_Kura_Kura: 1, Si_Belalang: 1 },
+            d: { Si_kancil: 1, Cindelaras: 1, Bawang_Putih: 1, Candra_Kirana: 1, Timun_Emas: 1, Si_Kura_Kura: 4, Si_Belalang: 2 }
         }
     },
     {
@@ -53,10 +53,10 @@ const questions = [
             d: "Mencari jalan untuk menguntungkan diri sendiri"
         },
         characterPoints: {
-            a: { si_kancil: 2, cindelaras: 3, bawang_putih: 4, putri_keong_mas: 4, timun_emas: 2, si_kura_kura: 3, si_belalang: 1 },
-            b: { si_kancil: 3, cindelaras: 4, bawang_putih: 3, putri_keong_mas: 2, timun_emas: 3, si_kura_kura: 4, si_belalang: 2 },
-            c: { si_kancil: 4, cindelaras: 2, bawang_putih: 2, putri_keong_mas: 3, timun_emas: 4, si_kura_kura: 2, si_belalang: 3 },
-            d: { si_kancil: 1, cindelaras: 1, bawang_putih: 1, putri_keong_mas: 1, timun_emas: 1, si_kura_kura: 1, si_belalang: 4 }
+            a: { Si_kancil: 2, Cindelaras: 3, Bawang_Putih: 4, Candra_Kirana: 4, Timun_Emas: 2, Si_Kura_Kura: 3, Si_Belalang: 1 },
+            b: { Si_kancil: 3, Cindelaras: 4, Bawang_Putih: 3, Candra_Kirana: 2, Timun_Emas: 3, Si_Kura_Kura: 4, Si_Belalang: 2 },
+            c: { Si_kancil: 4, Cindelaras: 2, Bawang_Putih: 2, Candra_Kirana: 3, Timun_Emas: 4, Si_Kura_Kura: 2, Si_Belalang: 3 },
+            d: { Si_kancil: 1, Cindelaras: 1, Bawang_Putih: 1, Candra_Kirana: 1, Timun_Emas: 1, Si_Kura_Kura: 1, Si_Belalang: 4 }
         }
     },
     {
@@ -68,10 +68,10 @@ const questions = [
             d: "Menunggu waktu yang tepat untuk bertindak"
         },
         characterPoints: {
-            a: { si_kancil: 4, cindelaras: 3, bawang_putih: 2, putri_keong_mas: 1, timun_emas: 4, si_kura_kura: 2, si_belalang: 3 },
-            b: { si_kancil: 2, cindelaras: 4, bawang_putih: 3, putri_keong_mas: 3, timun_emas: 3, si_kura_kura: 4, si_belalang: 4 },
-            c: { si_kancil: 3, cindelaras: 2, bawang_putih: 4, putri_keong_mas: 4, timun_emas: 2, si_kura_kura: 1, si_belalang: 1 },
-            d: { si_kancil: 1, cindelaras: 1, bawang_putih: 1, putri_keong_mas: 2, timun_emas: 1, si_kura_kura: 3, si_belalang: 2 }
+            a: { Si_kancil: 4, Cindelaras: 3, Bawang_Putih: 2, Candra_Kirana: 1, Timun_Emas: 4, Si_Kura_Kura: 2, Si_Belalang: 3 },
+            b: { Si_kancil: 2, Cindelaras: 4, Bawang_Putih: 3, Candra_Kirana: 3, Timun_Emas: 3, Si_Kura_Kura: 4, Si_Belalang: 4 },
+            c: { Si_kancil: 3, Cindelaras: 2, Bawang_Putih: 4, Candra_Kirana: 4, Timun_Emas: 2, Si_Kura_Kura: 1, Si_Belalang: 1 },
+            d: { Si_kancil: 1, Cindelaras: 1, Bawang_Putih: 1, Candra_Kirana: 2, Timun_Emas: 1, Si_Kura_Kura: 3, Si_Belalang: 2 }
         }
     },
     {
@@ -83,10 +83,10 @@ const questions = [
             d: "Mencari bantuan dari orang lain"
         },
         characterPoints: {
-            a: { si_kancil: 3, cindelaras: 2, bawang_putih: 4, putri_keong_mas: 3, timun_emas: 2, si_kura_kura: 1, si_belalang: 2 },
-            b: { si_kancil: 2, cindelaras: 4, bawang_putih: 3, putri_keong_mas: 4, timun_emas: 3, si_kura_kura: 3, si_belalang: 4 },
-            c: { si_kancil: 4, cindelaras: 3, bawang_putih: 2, putri_keong_mas: 2, timun_emas: 4, si_kura_kura: 2, si_belalang: 1 },
-            d: { si_kancil: 1, cindelaras: 1, bawang_putih: 1, putri_keong_mas: 1, timun_emas: 1, si_kura_kura: 4, si_belalang: 3 }
+            a: { Si_kancil: 3, Cindelaras: 2, Bawang_Putih: 4, Candra_Kirana: 3, Timun_Emas: 2, Si_Kura_Kura: 1, Si_Belalang: 2 },
+            b: { Si_kancil: 2, Cindelaras: 4, Bawang_Putih: 3, Candra_Kirana: 4, Timun_Emas: 3, Si_Kura_Kura: 3, Si_Belalang: 4 },
+            c: { Si_kancil: 4, Cindelaras: 3, Bawang_Putih: 2, Candra_Kirana: 2, Timun_Emas: 4, Si_Kura_Kura: 2, Si_Belalang: 1 },
+            d: { Si_kancil: 1, Cindelaras: 1, Bawang_Putih: 1, Candra_Kirana: 1, Timun_Emas: 1, Si_Kura_Kura: 4, Si_Belalang: 3 }
         }
     },
     {
@@ -98,10 +98,10 @@ const questions = [
             d: "Menunjukkan rasa cinta dengan tindakan kecil sehari-hari"
         },
         characterPoints: {
-            a: { si_kancil: 2, cindelaras: 3, bawang_putih: 3, putri_keong_mas: 4, timun_emas: 2, si_kura_kura: 4, si_belalang: 1 },
-            b: { si_kancil: 3, cindelaras: 4, bawang_putih: 4, putri_keong_mas: 3, timun_emas: 3, si_kura_kura: 2, si_belalang: 3 },
-            c: { si_kancil: 4, cindelaras: 2, bawang_putih: 2, putri_keong_mas: 2, timun_emas: 4, si_kura_kura: 1, si_belalang: 4 },
-            d: { si_kancil: 1, cindelaras: 1, bawang_putih: 1, putri_keong_mas: 1, timun_emas: 1, si_kura_kura: 3, si_belalang: 2 }
+            a: { Si_kancil: 2, Cindelaras: 3, Bawang_Putih: 3, Candra_Kirana: 4, Timun_Emas: 2, Si_Kura_Kura: 4, Si_Belalang: 1 },
+            b: { Si_kancil: 3, Cindelaras: 4, Bawang_Putih: 4, Candra_Kirana: 3, Timun_Emas: 3, Si_Kura_Kura: 2, Si_Belalang: 3 },
+            c: { Si_kancil: 4, Cindelaras: 2, Bawang_Putih: 2, Candra_Kirana: 2, Timun_Emas: 4, Si_Kura_Kura: 1, Si_Belalang: 4 },
+            d: { Si_kancil: 1, Cindelaras: 1, Bawang_Putih: 1, Candra_Kirana: 1, Timun_Emas: 1, Si_Kura_Kura: 3, Si_Belalang: 2 }
         }
     }
 ];
