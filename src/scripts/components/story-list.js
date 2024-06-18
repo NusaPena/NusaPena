@@ -42,7 +42,7 @@ class StoryList extends HTMLElement {
 		this._storyList = stories;
 		this._filteredStoryList = stories;
 		this.render();
-		this.previewStoryList();		
+		this.previewStoryList();
 	}
 
 	isLoadingItem() {
@@ -144,6 +144,7 @@ class StoryList extends HTMLElement {
 		return stories.map((story) => {
 			const newStoryitem = document.createElement("story-item");
 			newStoryitem.setStoryItem(story);
+			newStoryitem.setAttribute("tabindex", "0");
 
 			return newStoryitem;
 		});
