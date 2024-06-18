@@ -3,30 +3,37 @@ import questions from "../../data/personality-questions";
 const characterDescriptions = {
     Si_kancil: {
         story: "Kancil dan Buaya",
+        storyId: "fbsyg3fuveznhnt3",
         description: "Kamu dikenal sebagai orang yang cerdik dan pandai mencari solusi dari masalah dengan cepat. Seperti Kancil, kamu selalu menemukan cara kreatif untuk mengatasi tantangan yang dihadapi. Terus kembangkan kreativitasmu dan jangan ragu untuk berbagi ide-ide brilianmu dengan orang lain."
     },
     Cindelaras: {
         story: "Cindelaras",
+        storyId: "dgkemnmpb_prty8f",
         description: "Kamu adalah orang yang jujur dan pemberani, selalu berusaha menemukan kebenaran. Seperti Cindelaras, integritas dan keberanian adalah nilai-nilai utama dalam hidupmu. Tetaplah berpegang pada prinsip-prinsipmu dan jadilah contoh yang baik bagi orang-orang di sekitarmu."
     },
     Bawang_Putih: {
         story: "Bawang Putih dan Bawang Merah",
+        storyId: "dg13ng069jgjqbor",
         description: "Kamu adalah sosok yang sabar dan baik hati, meskipun sering menghadapi kesulitan. Seperti Bawang Putih, kebaikan hati dan kesabaranmu membuatmu mampu menghadapi segala rintangan. Jangan biarkan kesulitan meredupkan semangatmu. Teruslah berbuat baik, karena kebaikan akan selalu kembali padamu."
     },
     Candra_Kirana: {
         story: "Putri Keong Mas",
+        storyId: "dgmwb4kgkp3bblu9",
         description: "Kamu adalah simbol dari ketabahan dan keajaiban, dengan hati yang baik dan penuh kasih. Seperti Putri Keong Mas, kamu menunjukkan bahwa dengan ketabahan dan cinta, kamu dapat menghadapi segala sesuatu. Percayalah pada keajaiban dan jangan pernah menyerah pada impianmu, tidak peduli seberapa sulit jalannya."
     },
     Timun_Emas: {
         story: "Timun Emas",
+        storyId: "dgxlllmqcwmdo1dt",
         description: "Kamu adalah orang yang berani dan cerdik, selalu mencari cara untuk mengatasi bahaya. Seperti Timun Emas, keberanian dan kecerdikanmu membantu kamu menghadapi berbagai tantangan hidup. Terus asah keberanian dan kecerdikanmu, dan ingat bahwa setiap masalah memiliki solusi jika kamu cukup gigih mencarinya."
     },
     Si_Kura_Kura: {
         story: "Kura-Kura dan Kelinci",
+        storyId: "fbpznbbcwh54ifzm",
         description: "Kamu adalah lambang kesabaran dan kegigihan. Seperti Si Kura-Kura, kamu menunjukkan bahwa ketekunan bisa mengalahkan kecepatan dan bahwa kerja keras selalu membuahkan hasil. Jangan terburu-buru dalam mengejar tujuanmu. Teruslah bekerja keras dengan tekun dan yakinlah bahwa kesuksesan akan datang pada waktunya."
     },
     Si_Belalang: {
         story: "Belalang dan Semut",
+        storyId: "fbt1gpv6ldm3ybak",
         description: "Kamu cenderung menikmati hidup dan kadang-kadang mengabaikan perencanaan ke depan. Seperti Si Belalang, kamu mungkin menemukan dirimu menghadapi kesulitan karena kurangnya persiapan. Belajarlah untuk lebih menghargai pentingnya kerja keras dan perencanaan. Sedikit usaha dan perencanaan sekarang dapat mencegah banyak masalah di masa depan."
     }
 };
@@ -116,6 +123,7 @@ const Personality = {
                 <p>dari cerita</p>
                 <p class="highlight"><b>${description.story}</b></p>
                 <p class="desc">${description.description}</p>
+                <a class="main-button" href="#/detail/${description.storyId}"><i class="fa-solid fa-book"></i>    Baca Cerita</a>
             `;
             resultElement.style.display = 'block';
         }
