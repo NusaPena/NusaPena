@@ -52,7 +52,7 @@ class StoryNavigation extends HTMLElement {
     this.innerHTML = `
       <div class="story-nav-container">
         <div class="head-container">
-          <h2 class="main-text">Mau Baca Apa Hari Ini?</h2>
+          <h2 class="main-text"id="main-text">Mau Baca Apa Hari Ini?</h2>
           <form>
             <div class="search-container">
               <input 

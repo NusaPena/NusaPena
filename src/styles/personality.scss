@@ -1,7 +1,8 @@
 .personality-test {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,7 @@
         width: 90%;
         min-height: 200px;
         padding: 20px;
-        margin: 150px auto 0 auto;
+        margin: 350px auto 0 auto;
         justify-content: center;
         align-items: center;
         background-color: $white;
@@ -20,9 +21,16 @@
         max-width: 1000px;
         
         h1 {
+            position: relative;
             font-size: 2em;
-            margin-top: 20px;
+            margin: 0 auto;
+            top: -20px;
             text-align: center;
+            padding: 10px;
+            background-color: $black;
+            border-radius: 0px 0px 20px 20px;
+            color: $white;
+            max-width: 600px;
         }
 
         .question-box {
@@ -31,7 +39,7 @@
 
             .question {
                 font-size: 1.5em;
-                margin: 20px 0px;
+                margin: 0;
                 padding: 20px 0;
                 display: flex;
             }
@@ -46,20 +54,27 @@
                     align-items: center;
                     border: 2px solid rgba(0, 0, 0, 0.1);
                     border-radius: 10px;
+                    font-size: 1.2em;
+
+                    cursor: pointer;
 
                     span {
                         margin-left: 10px;
                     }
 
-                    &:hover {
+                    &:hover,
+                    &:focus,
+                    &:focus-within {
                         color: $white;
-                        background-color: lighten($blue, 10%);
+                        background-color: lighten($light-green, 10%);
+                        font-weight: 800;
                     }
 
                 }
             }
 
             .next {
+                font-family: $quicksand;
                 background-color: $yellow;
                 color: $white;
                 border: none;
@@ -69,9 +84,11 @@
                 min-width: 44px;
                 min-height: 44px;
                 font-size: 25px;
+                font-weight: 600;
                 display: flex;
                 justify-content: flex-end;
                 margin-top: 20px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 
                 &:hover {
                     box-shadow: #1e1e1e;
@@ -86,11 +103,12 @@
         }
 
         .result {
-            max-width: 600px;
+            max-width: 1000px;
             text-align: center;
             margin: 0 auto;
             padding: 20px;
             font-size: 25px;
+            display: flex;
 
             .highlight {
                 background-color: $yellow;
@@ -98,14 +116,44 @@
                 text-align: center;
                 border-radius: 10px;
                 font-size: 30px;
+                max-width: 500px;
+                margin: 0 auto;
             }
 
             .desc {
                 margin-top: 20px;
             }
+
+            .main-button {
+                background-color: $green;
+                padding: 10px 20px;
+                border-radius: 10px;
+                min-width: 44px;
+                min-height: 44px;
+                list-style: none;
+                color: $white;
+                font-family: $quicksand;
+                font-size: 20px;
+                font-weight: 600;
+                display: inline-block;
+                margin-top: 20px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+
+                &:hover{
+                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+                     cursor: pointer;
+                     scale: (1.03);
+                }
+      
+                @media screen and (min-width: 920px) {
+                     font-weight: 600;
+                     font-size: 25px;
+                     padding: 20px 30px;
+                }
+           }
         }
 
-        @media screen and (min-width: 870px) {
+        @media screen and (min-width: 600px) {
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 90%;
@@ -114,7 +162,7 @@
         }
 
         @media screen and (min-width: 1300px) {
-            width: 80%;
+            width: 85%;
         }
     }
 }

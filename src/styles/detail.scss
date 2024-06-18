@@ -35,13 +35,13 @@
           max-width: 300px;
         }
 
-        @media screen and (min-width:1400px) {
-          max-width: 400px;
-        }
+        // @media screen and (min-width:1400px) {
+        //   max-width: 400px;
+        // }
 
-        @media screen and (min-width:1900px) {
-          max-width: 500px;
-        }
+        // @media screen and (min-width:1900px) {
+        //   max-width: 500px;
+        // }
       }
   
       .detail-info {
@@ -322,8 +322,9 @@
       }
   
       @media screen and (min-width: 1200px) {
-        margin: 3rem 8rem;
-        margin-top: 10rem;
+        margin: 10rem auto 3rem auto;
+        width: 80%;
+        max-width: 1450px
       }
   
       .detail-container {
@@ -496,7 +497,7 @@
             }
   
             .detail-synopsis{
-              font-size: 28px;
+              font-size: 23px;
             }
           }
   
@@ -506,7 +507,7 @@
             }
   
             .detail-synopsis{
-              font-size: 32px;
+              font-size: 27px;
             }
           }
         }
@@ -570,7 +571,7 @@
           }
 
           .detail-desc{
-            font-size: 28px;
+            font-size: 23px;
           }
         }
 
@@ -580,7 +581,7 @@
           }
 
           .detail-desc{
-            font-size: 32px;
+            font-size: 27px;
           }
         }
       }
@@ -622,7 +623,7 @@
           }
 
           .morals-text{
-            font-size: 28px;
+            font-size: 23px;
           }
         }
 
@@ -632,7 +633,7 @@
           }
 
           .morals-text{
-            font-size: 32px;
+            font-size: 27px;
           }
         }
       }

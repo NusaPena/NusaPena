@@ -1,69 +1,80 @@
 import questions from "../../data/personality-questions";
 
 const characterDescriptions = {
-    si_kancil: {
+    Si_kancil: {
         story: "Kancil dan Buaya",
-        description: "Kancil dikenal sebagai hewan yang cerdik dan pandai mencari solusi dari masalah dengan cepat."
+        storyId: "fbsyg3fuveznhnt3",
+        description: "Kamu dikenal sebagai orang yang cerdik dan pandai mencari solusi dari masalah dengan cepat. Seperti Kancil, kamu selalu menemukan cara kreatif untuk mengatasi tantangan yang dihadapi. Terus kembangkan kreativitasmu dan jangan ragu untuk berbagi ide-ide brilianmu dengan orang lain."
     },
-    cindelaras: {
+    Cindelaras: {
         story: "Cindelaras",
-        description: "Cindelaras adalah anak yang jujur dan pemberani, yang selalu berusaha untuk menemukan kebenaran."
+        storyId: "dgkemnmpb_prty8f",
+        description: "Kamu adalah orang yang jujur dan pemberani, selalu berusaha menemukan kebenaran. Seperti Cindelaras, integritas dan keberanian adalah nilai-nilai utama dalam hidupmu. Tetaplah berpegang pada prinsip-prinsipmu dan jadilah contoh yang baik bagi orang-orang di sekitarmu."
     },
-    bawang_putih: {
+    Bawang_Putih: {
         story: "Bawang Putih dan Bawang Merah",
-        description: "Bawang Putih adalah sosok yang sabar dan baik hati, meskipun sering menghadapi kesulitan."
+        storyId: "dg13ng069jgjqbor",
+        description: "Kamu adalah sosok yang sabar dan baik hati, meskipun sering menghadapi kesulitan. Seperti Bawang Putih, kebaikan hati dan kesabaranmu membuatmu mampu menghadapi segala rintangan. Jangan biarkan kesulitan meredupkan semangatmu. Teruslah berbuat baik, karena kebaikan akan selalu kembali padamu."
     },
-    putri_keong_mas: {
+    Candra_Kirana: {
         story: "Putri Keong Mas",
-        description: "Putri Keong Mas adalah simbol dari ketabahan dan keajaiban, dengan hati yang baik dan penuh kasih."
+        storyId: "dgmwb4kgkp3bblu9",
+        description: "Kamu adalah simbol dari ketabahan dan keajaiban, dengan hati yang baik dan penuh kasih. Seperti Putri Keong Mas, kamu menunjukkan bahwa dengan ketabahan dan cinta, kamu dapat menghadapi segala sesuatu. Percayalah pada keajaiban dan jangan pernah menyerah pada impianmu, tidak peduli seberapa sulit jalannya."
     },
-    timun_emas: {
+    Timun_Emas: {
         story: "Timun Emas",
-        description: "Timun Emas adalah tokoh yang berani dan cerdik, yang selalu mencari cara untuk mengatasi bahaya."
+        storyId: "dgxlllmqcwmdo1dt",
+        description: "Kamu adalah orang yang berani dan cerdik, selalu mencari cara untuk mengatasi bahaya. Seperti Timun Emas, keberanian dan kecerdikanmu membantu kamu menghadapi berbagai tantangan hidup. Terus asah keberanian dan kecerdikanmu, dan ingat bahwa setiap masalah memiliki solusi jika kamu cukup gigih mencarinya."
     },
-    si_kura_kura: {
+    Si_Kura_Kura: {
         story: "Kura-Kura dan Kelinci",
-        description: "Si Kura-Kura adalah lambang kesabaran dan kegigihan. Dia menunjukkan bahwa ketekunan bisa mengalahkan kecepatan."
+        storyId: "fbpznbbcwh54ifzm",
+        description: "Kamu adalah lambang kesabaran dan kegigihan. Seperti Si Kura-Kura, kamu menunjukkan bahwa ketekunan bisa mengalahkan kecepatan dan bahwa kerja keras selalu membuahkan hasil. Jangan terburu-buru dalam mengejar tujuanmu. Teruslah bekerja keras dengan tekun dan yakinlah bahwa kesuksesan akan datang pada waktunya."
     },
-    si_belalang: {
+    Si_Belalang: {
         story: "Belalang dan Semut",
-        description: "Si Belalang adalah simbol dari pentingnya kerja keras dan perencanaan ke depan."
+        storyId: "fbt1gpv6ldm3ybak",
+        description: "Kamu cenderung menikmati hidup dan kadang-kadang mengabaikan perencanaan ke depan. Seperti Si Belalang, kamu mungkin menemukan dirimu menghadapi kesulitan karena kurangnya persiapan. Belajarlah untuk lebih menghargai pentingnya kerja keras dan perencanaan. Sedikit usaha dan perencanaan sekarang dapat mencegah banyak masalah di masa depan."
     }
 };
 
+
 const Personality = {
     async render() {
-        document.querySelector('footer').style.display = 'none';
+        const footer = document.querySelector("footer");
+        if (footer) {
+            footer.style.display = 'none';
+        }
         return `
-    <section class="personality-test">
-        <div class="test-container">
-        <h1>Karakter Apa Kah Kamu?</h1>
-        <div class="question-box">
-            <p id="question" class="question">Ini pertannyaanya, apakah kamu blablabla</p>
-            <div id="options" class="options">
-                <!-- <label class="option"><input type="radio" name="option" class="option1"><span>Opsi 1</span></label>
-                <label class="option"><input type="radio" name="option" class="option2"><span>Opsi 1</span></label>
-                <label class="option"><input type="radio" name="option" class="option3"><span>Opsi 1</span></label> -->
-            </div>
-            <button class="next">Selanjutnya</button>
-        </div>
-        <div class="result"></div>
-        </div>
-    </section>
-    `;
+            <section class="personality-test">
+                <div class="test-container">
+                    <h1>Karakter Apa Kah Kamu?</h1>
+                    <div class="question-box">
+                        <p id="question" class="question">Ini pertannyaanya, apakah kamu blablabla</p>
+                        <div id="options" class="options">
+                            <!-- <label class="option"><input type="radio" name="option" class="option1"><span>Opsi 1</span></label>
+                            <label class="option"><input type="radio" name="option" class="option2"><span>Opsi 1</span></label>
+                            <label class="option"><input type="radio" name="option" class="option3"><span>Opsi 1</span></label> -->
+                        </div>
+                        <button class="next">Selanjutnya</button>
+                    </div>
+                    <div class="result"></div>
+                </div>
+            </section>
+        `;
     },
 
     async afterRender() {
         console.log("personality page");
         let currentQuestion = 0;
         const scores = {
-            si_kancil: 0,
-            cindelaras: 0,
-            bawang_putih: 0,
-            putri_keong_mas: 0,
-            timun_emas: 0,
-            si_kura_kura: 0,
-            si_belalang: 0
+            Si_kancil: 0,
+            Cindelaras: 0,
+            Bawang_Putih: 0,
+            Candra_Kirana: 0,
+            Timun_Emas: 0,
+            Si_Kura_Kura: 0,
+            Si_Belalang: 0
         };
 
         const questionElement = document.getElementById('question');
@@ -72,17 +83,30 @@ const Personality = {
         const resultElement = document.querySelector('.result');
 
         function showQuestion(questionIndex) {
-            console.log(questionIndex);
             const question = questions[questionIndex];
-            console.log(question);
             questionElement.textContent = question.question;
             optionsElement.innerHTML = '';
             for (const [key, answer] of Object.entries(question.answers)) {
                 const optionLabel = document.createElement('label');
                 optionLabel.classList.add('option');
-                optionLabel.innerHTML = `<input type="radio" name="option" value="${key}"><span>${answer}</span>`;
+                optionLabel.innerHTML = `<input type="radio" name="option" value="${key}" tabindex="0"><span>${answer}</span>`;
                 optionsElement.appendChild(optionLabel);
             }
+
+            const optionInputs = optionsElement.querySelectorAll('input[type="radio"]');
+            optionInputs.forEach((input, index) => {
+                input.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                        optionInputs[(index + 1) % optionInputs.length].focus();
+                        
+                    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                        optionInputs[(index - 1 + optionInputs.length) % optionInputs.length].focus();
+                        
+                    } else if (event.key === 'Enter') {
+                        input.checked = true;
+                    }
+                });
+            });
         }
 
         function calculateResult() {
@@ -115,6 +139,7 @@ const Personality = {
                 <p>dari cerita</p>
                 <p class="highlight"><b>${description.story}</b></p>
                 <p class="desc">${description.description}</p>
+                <a class="main-button" href="#/detail/${description.storyId}"><i class="fa-solid fa-book"></i>    Baca Cerita</a>
             `;
             resultElement.style.display = 'block';
         }

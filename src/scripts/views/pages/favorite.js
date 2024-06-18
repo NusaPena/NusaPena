@@ -11,6 +11,10 @@ const Favorite = {
   },
 
   async afterRender() {
+    const mainText = document.getElementById("main-text");
+    console.log(mainText);
+    mainText.textContent = "Koleksi Cerita Favoritmu";
+
     const favoriteListElement = document.querySelector("story-list");
     const storyNavigation = document.querySelector("story-navigation");
     if (storyNavigation) {
