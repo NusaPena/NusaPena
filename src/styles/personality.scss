@@ -1,7 +1,8 @@
 .personality-test {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,13 +56,18 @@
                     border-radius: 10px;
                     font-size: 1.2em;
 
+                    cursor: pointer;
+
                     span {
                         margin-left: 10px;
                     }
 
-                    &:hover {
+                    &:hover,
+                    &:focus,
+                    &:focus-within {
                         color: $white;
                         background-color: lighten($light-green, 10%);
+                        font-weight: 800;
                     }
 
                 }

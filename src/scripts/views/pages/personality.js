@@ -41,24 +41,27 @@ const characterDescriptions = {
 
 const Personality = {
     async render() {
-        document.querySelector('footer').style.display = 'none';
+        const footer = document.querySelector("footer");
+        if (footer) {
+            footer.style.display = 'none';
+        }
         return `
-    <section class="personality-test">
-        <div class="test-container">
-        <h1>Karakter Apa Kah Kamu?</h1>
-        <div class="question-box">
-            <p id="question" class="question">Ini pertannyaanya, apakah kamu blablabla</p>
-            <div id="options" class="options">
-                <!-- <label class="option"><input type="radio" name="option" class="option1"><span>Opsi 1</span></label>
-                <label class="option"><input type="radio" name="option" class="option2"><span>Opsi 1</span></label>
-                <label class="option"><input type="radio" name="option" class="option3"><span>Opsi 1</span></label> -->
-            </div>
-            <button class="next">Selanjutnya</button>
-        </div>
-        <div class="result"></div>
-        </div>
-    </section>
-    `;
+            <section class="personality-test">
+                <div class="test-container">
+                    <h1>Karakter Apa Kah Kamu?</h1>
+                    <div class="question-box">
+                        <p id="question" class="question">Ini pertannyaanya, apakah kamu blablabla</p>
+                        <div id="options" class="options">
+                            <!-- <label class="option"><input type="radio" name="option" class="option1"><span>Opsi 1</span></label>
+                            <label class="option"><input type="radio" name="option" class="option2"><span>Opsi 1</span></label>
+                            <label class="option"><input type="radio" name="option" class="option3"><span>Opsi 1</span></label> -->
+                        </div>
+                        <button class="next">Selanjutnya</button>
+                    </div>
+                    <div class="result"></div>
+                </div>
+            </section>
+        `;
     },
 
     async afterRender() {
@@ -80,17 +83,30 @@ const Personality = {
         const resultElement = document.querySelector('.result');
 
         function showQuestion(questionIndex) {
-            console.log(questionIndex);
             const question = questions[questionIndex];
-            console.log(question);
             questionElement.textContent = question.question;
             optionsElement.innerHTML = '';
             for (const [key, answer] of Object.entries(question.answers)) {
                 const optionLabel = document.createElement('label');
                 optionLabel.classList.add('option');
-                optionLabel.innerHTML = `<input type="radio" name="option" value="${key}"><span>${answer}</span>`;
+                optionLabel.innerHTML = `<input type="radio" name="option" value="${key}" tabindex="0"><span>${answer}</span>`;
                 optionsElement.appendChild(optionLabel);
             }
+
+            const optionInputs = optionsElement.querySelectorAll('input[type="radio"]');
+            optionInputs.forEach((input, index) => {
+                input.addEventListener('keydown', (event) => {
+                    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                        optionInputs[(index + 1) % optionInputs.length].focus();
+                        
+                    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                        optionInputs[(index - 1 + optionInputs.length) % optionInputs.length].focus();
+                        
+                    } else if (event.key === 'Enter') {
+                        input.checked = true;
+                    }
+                });
+            });
         }
 
         function calculateResult() {
