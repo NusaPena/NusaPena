@@ -55,7 +55,7 @@
 
       &:hover {
         color: $white;
-        outline: 3px solid $white;
+        transform: scale(1.05);
       }
 
       &:active {
