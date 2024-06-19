@@ -29,7 +29,8 @@ navigation-bar {
     color: $black;
     cursor: pointer;
     border: none;
-    &:hover, &:focus {
+    &:hover, 
+    &:focus-visible {
       color: $green;
       outline: 3px solid $green;
     }
@@ -69,8 +70,10 @@ navigation-bar {
           font-size: 17px;
           font-weight: 200;
           
-          &:hover, &:focus {
+          &:hover, 
+          &:focus {
             color: $yellow;
+            font-weight: 800;
           }
         }
       }
@@ -119,14 +122,12 @@ navigation-bar {
             font-size: 22px;
             font-weight: 400;
   
-            &:hover {
+            &:hover,
+            &:focus {
               color: $black;
               background-color: $yellow;
               border-radius: 15px;
-            }
-
-            &:focus{
-              color: $black;
+              font-weight: unset;
             }
           }
         }
@@ -137,10 +138,10 @@ navigation-bar {
   @media screen and (min-width: 1100px) {
     .nav-title{
       font-size: 24px;
-      margin-left: 15%;
+      margin-left: 12%;
     }
     .nav-list {
-      margin-right: 15%;
+      margin-right: 12%;
 
       ul li {
       margin-left: 10px;

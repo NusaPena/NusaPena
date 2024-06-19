@@ -69,7 +69,8 @@
                 border-radius: 5px;
             }
 
-            &:hover {
+            &:hover,
+            &:focus-visible {
                 box-shadow: 0px 0px 20px $green;
                 cursor: pointer;
             }
@@ -117,7 +118,8 @@
         cursor: pointer;
         font-size: 14px;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $dark-yellow;
         }
     }

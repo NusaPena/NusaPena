@@ -97,7 +97,7 @@ class StoryDetail extends HTMLElement {
 
                 <div class="detail-content">
                     <h3 class="detail-title">${this._storyDetails.title}</h3>
-                     <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
+                    <span class="line ${this._storyDetails.category.toLowerCase()}-line"></span>
                     <p class="detail-origin">Asal : ${this._storyDetails.origin}</p>
                     <p class="detail-desc">${this._storyDetails.storyDesc}</p>
                 </div>
@@ -149,22 +149,22 @@ class StoryDetail extends HTMLElement {
 		if (category === "Fabel") {
 			span.classList.add("category-fable");
 			span.innerHTML = `
-                    <p><i class="fa fa-paw"></i> ${this._storyDetails.category}</p>
+                <p><i class="fa fa-paw"></i> ${this._storyDetails.category}</p>
             `;
 		} else if (category === "Sage") {
 			span.classList.add("category-sage");
 			span.innerHTML = `
-                    <p><i class="fa fa-scroll"></i> ${this._storyDetails.category}</p>
+                <p><i class="fa fa-scroll"></i> ${this._storyDetails.category}</p>
             `;
 		} else if (category === "Legenda") {
 			span.classList.add("category-legend");
 			span.innerHTML = `
-                    <p><i class="fa-solid fa-flag"></i> ${this._storyDetails.category}</p>
+                <p><i class="fa-solid fa-flag"></i> ${this._storyDetails.category}</p>
             `;
 		} else if (category === "Dongeng") {
 			span.classList.add("category-dongeng");
 			span.innerHTML = `
-                    <p><i class="fa fa-crown"></i> ${this._storyDetails.category}</p>
+                <p><i class="fa fa-crown"></i> ${this._storyDetails.category}</p>
             `;
 		}
 	}

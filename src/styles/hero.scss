@@ -52,16 +52,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      color: $white;
 
-      &:hover {
-        color: $white;
+      &:hover,
+      &:focus {
+        background-color: darken($yellow, 7%);
         transform: scale(1.05);
-      }
-
-      &:active {
-        color: $yellow;
-        background-color: $white;
-        outline: 3px solid $yellow;
       }
     }
 
