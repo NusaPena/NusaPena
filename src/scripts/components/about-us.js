@@ -58,9 +58,9 @@ class AboutUs extends HTMLElement {
                                 class="icon" aria-label="Email">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/muhammad-
-                                rafi-aria-sarosa/" class="icon" ari
-                                a-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/muhammad-rafi-aria-sarosa/"
+			    	class="icon" aria-label="LinkedIn"
+				target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
                         </div>
@@ -80,9 +80,9 @@ class AboutUs extends HTMLElement {
                                 class="icon" aria-label="Email">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/ilham-ali
-                                fio-daruwijaya/" class="icon" aria-
-                                label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/ilham-alifio-daruwijaya/"
+			    	class="icon" aria-label="LinkedIn"
+				target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
                         </div>
