@@ -6,7 +6,7 @@ class App {
           const mainContent  = document.getElementById("main-content");
           const footer = document.querySelector("footer");
           if (footer) {
-               footer.style.display = 'block';
+               footer.style.display = "block";
           }
 
           const url  = UrlParser.parseActiveUrlWithCombiner();

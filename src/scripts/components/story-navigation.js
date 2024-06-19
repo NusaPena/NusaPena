@@ -31,14 +31,14 @@ class StoryNavigation extends HTMLElement {
     });
 
     const searchInput = this.querySelector("#search-input");
-    const searchIcon = this.querySelector('.search-icon');
+    const searchIcon = this.querySelector(".search-icon");
     if (searchInput) {
       searchInput.addEventListener("input", () => {
         const searchQuery = searchInput.value.trim();
         if (searchQuery !== "") {
-          searchIcon.classList.add('hidden');
+          searchIcon.classList.add("hidden");
         } else {
-          searchIcon.classList.remove('hidden');
+          searchIcon.classList.remove("hidden");
         }
         const searchEvent = new CustomEvent("searchStories", {
           detail: { query: searchQuery },
