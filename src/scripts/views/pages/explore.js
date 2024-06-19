@@ -27,7 +27,9 @@ const Explore = {
 
       storyNavigation.addEventListener("searchStories", (searchEvent) => {
         const { query } = searchEvent.detail;
-        const filteredStories = stories.filter((story) => story.title.toLowerCase().includes(query.toLowerCase()));
+        const filteredStories = stories.filter(
+          (story) => story.title.toLowerCase().includes(query.toLowerCase()),
+        );
         if (storyList) {
           storyList.setStoryList(filteredStories);
         }

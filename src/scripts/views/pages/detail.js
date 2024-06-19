@@ -4,8 +4,8 @@ import StoryDetailHandler from "../../utils/story-detail-handler";
 const Detail = {
   async render() {
     return `
-    <story-detail></story-detail>
-      `;
+      <story-detail></story-detail>
+    `;
   },
 
   async afterRender() {
