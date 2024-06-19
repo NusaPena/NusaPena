@@ -1,15 +1,15 @@
 class GenreSection extends HTMLElement {
-    constructor() {
-      super();
-    }
+	constructor() {
+		super();
+	}
 
-    connectedCallback() {
-      this.render();
-      this.addEventListeners();
-    }
+	connectedCallback() {
+		this.render();
+		this.addEventListeners();
+	}
 
-    render() {
-      this.innerHTML = `
+	render() {
+		this.innerHTML = `
         <section class="genre">
             <h2>Tahukah Kamu?</h2>
             <p>Indonesia memiliki berbagai jenis cerita rakyat loh!</p>
@@ -45,67 +45,79 @@ class GenreSection extends HTMLElement {
         </section>
         </section>
       `;
-    }
+	}
 
-    addEventListeners() {
-        const genreItems = this.querySelectorAll(".genre-item");
-        const detailDialog = this.querySelector("#genre-detail");
-        const detailTitle = this.querySelector("#detail-title");
-        const detailDescription = this.querySelector("#detail-description");
-        const closeDetailButton = this.querySelector("#close-detail-button");
+	addEventListeners() {
+		const genreItems = this.querySelectorAll(".genre-item");
+		const detailDialog = this.querySelector("#genre-detail");
+		const detailTitle = this.querySelector("#detail-title");
+		const detailDescription = this.querySelector("#detail-description");
+		const closeDetailButton = this.querySelector("#close-detail-button");
 
-        const genreTitle = {
-          fabel: "FABEL",
-          sage: "SAGE",
-          legenda: "LEGENDA",
-          dongeng: "DONGENG",
-        };
+		const genreTitle = {
+			fabel: "FABEL",
+			sage: "SAGE",
+			legenda: "LEGENDA",
+			dongeng: "DONGENG",
+		};
 
-        const genreDescriptions = {
-          fabel: "Fabel adalah cerita yang menggambarkan binatang berperilaku seperti manusia dan mengandung pesan moral.",
-          sage: "Sage adalah cerita rakyat yang dianggap benar oleh yang punya cerita dan sering kali mengandung unsur sejarah.",
-          legenda: "Legenda adalah cerita tentang asal-usul terjadinya suatu tempat atau fenomena alam.",
-          dongeng: "Dongeng adalah cerita khayalan yang tidak benar-benar terjadi dan hanya untuk hiburan.",
-        };
+		const genreDescriptions = {
+			fabel: "Fabel adalah cerita yang menggambarkan binatang berperilaku seperti manusia dan mengandung pesan moral.",
+			sage: "Sage adalah cerita rakyat yang dianggap benar oleh yang punya cerita dan sering kali mengandung unsur sejarah.",
+			legenda: "Legenda adalah cerita tentang asal-usul terjadinya suatu tempat atau fenomena alam.",
+			dongeng: "Dongeng adalah cerita khayalan yang tidak benar-benar terjadi dan hanya untuk hiburan.",
+		};
 
-        genreItems.forEach((item) => {
-          item.addEventListener("click", () => {
-            const genre = item.getAttribute("data-genre");
-            detailTitle.innerText = genreTitle[genre];
-            detailDescription.innerText = genreDescriptions[genre];
-            detailDialog.showModal();
+		const showDetailDialog = (genre) => {
+			detailTitle.innerText = genreTitle[genre];
+			detailDescription.innerText = genreDescriptions[genre];
+			detailDialog.showModal();
 
-            const overlay = document.createElement("div");
-            overlay.classList.add("detail-overlay");
-            overlay.addEventListener("click", (event) => {
-              if (!detailDialog.contains(event.target)) {
-                detailDialog.close();
-                document.body.removeChild(overlay);
-              }
-            });
-            document.body.appendChild(overlay);
-          });
-        });
+			const overlay = document.createElement("div");
+			overlay.classList.add("detail-overlay");
+			overlay.addEventListener("click", (event) => {
+				if (!detailDialog.contains(event.target)) {
+					detailDialog.close();
+					document.body.removeChild(overlay);
+				}
+			});
+			document.body.appendChild(overlay);
+		};
 
-        closeDetailButton.addEventListener("click", () => {
-            detailDialog.close();
+		genreItems.forEach((item) => {
+			item.addEventListener("click", () => {
+				const genre = item.getAttribute("data-genre");
+				showDetailDialog(genre);
+			});
 
-            const overlay = document.querySelector(".detail-overlay");
-            if (overlay) {
-              document.body.removeChild(overlay);
-            }
-          });
+			item.addEventListener("keydown", (event) => {
+				if (event.key === "Enter") {
+					const genre = item.getAttribute("data-genre");
+					showDetailDialog(genre);
+          event.preventDefault();
+				}
+			});
+		});
 
-          window.addEventListener("click", (event) => {
-            if (event.target === detailDialog) {
-                const overlay = document.querySelector(".detail-overlay");
-                if (overlay) {
-                    detailDialog.close();
-                    document.body.removeChild(overlay);
-                }
-            }
-        });
-      }
-    }
+		closeDetailButton.addEventListener("click", () => {
+			detailDialog.close();
 
-    customElements.define("genre-section", GenreSection);
+			const overlay = document.querySelector(".detail-overlay");
+			if (overlay) {
+				document.body.removeChild(overlay);
+			}
+		});
+
+		window.addEventListener("click", (event) => {
+			if (event.target === detailDialog) {
+				const overlay = document.querySelector(".detail-overlay");
+				if (overlay) {
+					detailDialog.close();
+					document.body.removeChild(overlay);
+				}
+			}
+		});
+	}
+}
+
+customElements.define("genre-section", GenreSection);
